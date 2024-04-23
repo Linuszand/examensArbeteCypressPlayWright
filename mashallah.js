@@ -47,6 +47,20 @@ let goBackWood = document.createElement('button');
 let enterTextWood = document.createTextNode('enter');
 let goBackTextWood = document.createTextNode('go back');
 
+//Buttons for when you're inside the wooden castle
+let woodGoOut = document.createElement('button');
+let woodGoOutText = document.createTextNode('go outside');
+let blackKnight = document.createElement('button');
+let blackKnighttext = document.createTextNode('Go up');
+let doorNextToStaircase = document.createElement('button');
+let doorNextToStaircaseText = document.createTextNode('Go forward');
+let rightDoor = document.createElement('button');
+let rightDoorText = document.createTextNode('Go right');
+
+//Buttons for when you're inside the stone castle
+let stoneGoOut = document.createElement('button');
+let stoneGoOutText = document.createTextNode('go outside');
+
 //images variables
 let castleImage = document.getElementById('the-body');
 let bloForest = document.getElementById('the-body');
@@ -54,6 +68,7 @@ let bloBridge = document.getElementById('the-body');
 let sleepingTroll = document.getElementById('the-body');
 let scaryTroll = document.getElementById('the-body');
 let castleWood = document.getElementById('the-body');
+let castleStaircase = document.getElementById('the-body');
 bloForest.style.backgroundImage = "url('images/bloforest.jpg')";
 bloForest.style.backgroundSize = 'cover';
 bloForest.style.backgroundPosition = 'center';
@@ -136,7 +151,7 @@ function outdivStone() {
 
 // When you click the castle of wood button
 function outdivWood() {
-    outputDiv.innerHTML = "<p>As you approach the castle of wood, the first thing that strikes you is its unexpected warmth and rustic charm. Unlike the imposing stone fortresses of traditional lore, this castle exudes a welcoming aura, almost as if it's eager to embrace visitors within its wooden embrace. You decide to:</p>";
+    outputDiv.innerHTML = "<p>As you approach the castle of wood, the sky hangs heavy with oppressive grey clouds, suffocating any semblance of light. The first thing that strikes you is the blood-red hue of the rooftops, a stark contrast against the dreary backdrop, like freshly spilled gore staining the earth. You decide to:</p>";
     castle1.style.display = 'none';
     castle2.style.display = 'none';
     enterWood.style.display = 'inline-block';
@@ -146,8 +161,25 @@ function outdivWood() {
     document.body.appendChild(enterWood);
     document.body.appendChild(goBackWood);
     castleWood.style.backgroundImage = "url('images/wood-castle.png')";
-    castleWood.style.backgroundSize = 'cover';
+    castleWood.style.backgroundSize = '1550px 1024px';
     castleWood.style.backgroundPosition = 'center';  
+    castleWood.style.backgroundRepeat = 'no-repeat';
+}
+
+// When you click the enter button for the wooden castle
+function enterWoodCastle() {
+    outputDiv.innerHTML = "<p>As you enter the wooden castle, your gaze is immediately drawn to the Black Knight standing on the second level above the staircase. Its presence is ominous, its armor gleaming darkly in the dim light. Its gaze locks onto you with an unsettling intensity, and as you meet its eyes, a shiver runs down your spine. There are multiple pathways possible from here, you decide to: </p>";
+    castleStaircase.style.backgroundImage= "url('images/image_ADS9BLZe_1713866202748_raw.jpg')"
+    castleWood.style.backgroundPosition = 'center';  
+    castleWood.style.backgroundRepeat = 'no-repeat';
+    goBackWood.style.display = 'none';
+    enterWood.style.display = 'none';
+    woodGoOut.style.display = 'inline-block';
+    woodGoOut.appendChild(woodGoOutText);
+    document.body.appendChild(woodGoOut);
+    blackKnight.appendChild(blackKnighttext);
+    document.body.appendChild(blackKnight);
+    doorNextToStaircase.appendChild(doorNextToStaircase)
 }
 
 // adds castle of wood and castle of wood buttons when you click walk across
@@ -156,6 +188,24 @@ function addButtonCastle() {
     castle2.appendChild(castleWoodText);
     document.body.appendChild(castle1);
     document.body.appendChild(castle2);
+}
+
+//Go back to outside the wooden castle function
+function goOutsideWood() {
+    outputDiv.innerHTML = "<p>You go outside the wooden castle. </p>";
+    castle1.style.display = 'none';
+    castle2.style.display = 'none';
+    woodGoOut.style.display = 'none';
+    enterWood.style.display = 'inline-block';
+    goBackWood.style.display  = 'inline-block';
+    enterWood.appendChild(enterTextWood);
+    goBackWood.appendChild(goBackTextWood);
+    document.body.appendChild(enterWood);
+    document.body.appendChild(goBackWood);
+    castleWood.style.backgroundImage = "url('images/wood-castle.png')";
+    castleWood.style.backgroundSize = '1550px 1024px';
+    castleWood.style.backgroundPosition = 'center';  
+    castleWood.style.backgroundRepeat = 'no-repeat';
 }
 
 // When you click go back after you're at the castle of stone
@@ -180,6 +230,12 @@ goBackWood.addEventListener('click', goBackFunc);
 // executes the outdivStone and outdivWood functions when you click on the castle of stone or castle of wood button
 castle1.addEventListener('click', outdivStone);
 castle2.addEventListener('click', outdivWood);
+
+// exectues the enterWoodCastle functions when you click on the enter button with the wooden castle
+enterWood.addEventListener('click', enterWoodCastle);
+
+//inside the wooden castle buttons
+woodGoOut.addEventListener('click', goOutsideWood);
 
 // hides the continue, run away and walk across button when you start the game
 continues.style.display = 'none';
