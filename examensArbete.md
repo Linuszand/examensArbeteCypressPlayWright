@@ -46,7 +46,7 @@ I examensarbetets inledning ska ni ge en kortfattad inledning till varför ni ju
 
 Under min tid på LIAn testade vi olika produkter mest med Cypress, men vi fick även tips om ett testverktyg som heter Playwright. Jag har därför valt att jämföra Cypress och Playwrights för- och nackdelar. Huvudsaken till varför jag valde Playwright är för det känns relevant att testa ett modernare testverktyg mot ett äldre.
 
-Jag börjar med att förklara de olika testverktygen och sedan går in på för- och nackdelar. Jag kommer jämföra för- och nackdelar av:
+Jag börjar med att förklara de olika testverktygen och sedan går in på för- och nackdelar. Jag kommer jämföra för- och nackdelar:
 1. Hur lätt det är att komma igång med testverktyget
 2. Hur lätt det är att skriva testkoden
 3. Om testverktyget har en informationsrik och lättförståelig dokumentation
