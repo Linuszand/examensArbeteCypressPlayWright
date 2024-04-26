@@ -51,7 +51,7 @@ Jag börjar med att förklara de olika testverktygen och sedan går in på för-
 2. Hur lätt det är att skriva testkoden
 3. Om testverktyget har en informationsrik och lättförståelig dokumentation
 4. Om testverktyget ger en effektivt och snygg visuell display av testkoden (UI)
-5. 
+5. Vilket testverktyg som är mest effektivt i olika områden av testning
 
 Cypress är ett front-end testverktyg som underlättar för programvarutestare att automatisera olika handlingar man gör när man besöker en sida. Handlingar i det här fallet är t.ex. att klicka på en knapp eller att kolla om en selektor existerar där den ska vara. Automatiseringen av dessa handlingar görs med hjälp av kod man skriver i Javascript. Det finns även ett skript man kan använda för att starta en UI över vad testkoden gör.
 
