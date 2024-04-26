@@ -22,7 +22,7 @@ Denna rubrik kan tas bort om det inte finns begrepp och förkortningar som behö
 
 Översätt inte bara förkortningens innebörd, utan förklara med egna ord vad det är för något. Till exempel:
 
-| Akronym | Akronym för | Beskrivning                                                                                                        |
+| Akronym | Hela namnet           | Beskrivning                                                                                              |
 | ---     | --------------------- | -------------------------------------------------------------------------------------------------------  |
 | UI      | User Interface        | Det vi som användare ser när vi besöker en hemsida samt interaktionen mellan sidan och användaren        |
 | ``      | ``                    | ``                                                                                                       |
