@@ -80,14 +80,11 @@ Vad bör Cypress och Playwright prioritera när det gäller testning?
 
 Hur ska jag jämföra Cypress och Playwright?
 
-Varför är Playwright bättre?
+Hur är jag säker på att  Playwright är bättre än Cypress?
 
-Varför är Playwright sämre?
+Hur är jag säker på att  Playwright är sämre än Cypress?
 
-
-
-
-
+Vad ska jag jämföra för något mellan Cypress och Playwright?
 
 ## 1.4 Avgränsningar och fokus
 
