@@ -27,6 +27,7 @@ let walkAcrossValue;
 
 // Changes text if you try to go to the deadend when you click right to "You've already been here, stahp it"
 let count = 0;
+// Handles the start text, so it actually resets completely.
 let textCount = 0;
 // Don't remember
 let walkAcrossCount = 0;
@@ -83,8 +84,9 @@ let castleStaircase = document.getElementById('the-body');
 let darkCastle = document.getElementById('the-body');
 let theRoad = document.getElementById('the-body');
 let gameOverBridge = document.getElementById('the-body');
+let gameOverKnight = document.getElementById('the-body');
 bloForest.style.backgroundImage = "url('images/bloforest.jpg')";
-bloForest.style.backgroundSize = '1024px 800px';
+bloForest.style.backgroundSize = '600px 400px';
 bloForest.style.backgroundPosition = 'center';
 bloForest.style.backgroundRepeat = 'no-repeat';
 
@@ -150,7 +152,7 @@ function inlineButtons() {
 // when you click the castle of stone button
 function outdivStone() {
     castleImage.style.backgroundImage = "url('images/outsidedarkcastle.jpg')";
-    castleImage.style.backgroundSize = '1024px 800px';
+    castleImage.style.backgroundSize = '600px 400px';
     castleImage.style.backgroundPosition = 'center';
     castleImage.style.backgroundRepeat = 'no-repeat';
     outputDiv.innerHTML = '<p>As you arrive before the ancient castle, its formidable presence looms large against the backdrop of the desolate landscape. The walls, dark as the night itself, stand tall and imposing, their surface gleaming dully in the subdued light of the overcast sky. You decide to:</p>'
@@ -177,14 +179,14 @@ function outdivWood() {
     document.body.appendChild(enterWood);
     document.body.appendChild(goBackWood);
     castleWood.style.backgroundImage = "url('images/wood-castle.png')";
-    castleWood.style.backgroundSize = '1024px 800px';
+    castleWood.style.backgroundSize = '600px 400px';
     castleWood.style.backgroundPosition = 'center';  
     castleWood.style.backgroundRepeat = 'no-repeat';
 }
 
 // When you click the enter button for the wooden castle
 function enterWoodCastle() {
-    outputDiv.innerHTML = "<p>As you enter the wooden castle, your gaze is immediately drawn to the black Knight standing on the second level above the staircase. Its presence ominous, its armor gleaming darkly in the dim light. There are multiple pathways possible from here, you decide to: </p>";
+    outputDiv.innerHTML = "<p>As you enter the wooden castle, your gaze is immediately drawn to the black knight standing on the second level above the staircase. Its presence ominous, its armor gleaming darkly in the dim light. There are multiple pathways possible from here, you decide to: </p>";
     castleStaircase.style.backgroundImage= "url('images/image_ADS9BLZe_1713866202748_raw.jpg')"
     castleWood.style.backgroundPosition = 'center';  
     castleWood.style.backgroundRepeat = 'no-repeat';
@@ -213,7 +215,7 @@ function enterStoneCastle() {
     rightPassageWay.style.display = 'inline-block';
     darkCastle.style.backgroundImage = "url('images/darkcastle.jpg')";
     darkCastle.style.backgroundPosition = 'center';
-    darkCastle.style.backgroundSize = '1024px 800px';
+    darkCastle.style.backgroundSize = '600px 400px';
     darkCastle.style.backgroundRepeat = 'no-repeat';
 }
 
@@ -240,7 +242,7 @@ function goOutsideWood() {
     document.body.appendChild(enterWood);
     document.body.appendChild(goBackWood);
     castleWood.style.backgroundImage = "url('images/wood-castle.png')";
-    castleWood.style.backgroundSize = '1024px 800px';
+    castleWood.style.backgroundSize = '600px 400px';
     castleWood.style.backgroundPosition = 'center';  
     castleWood.style.backgroundRepeat = 'no-repeat';
 }
@@ -258,7 +260,7 @@ function goOutsideStone() {
 
 // When you click go back after you're at the castle of stone
 function goBackFunc() {
-    outputDiv.innerHTML = "<p>You went back to the other side of the bridge</p>";
+    outputDiv.innerHTML = "<p>You went back to the other side of the bridge.</p>";
     walkAcross.style.display = 'inline-block';
     enterStone.style.display = 'none';
     goBack.style.display = 'none';
@@ -267,26 +269,44 @@ function goBackFunc() {
     runAway.style.display = 'inline-block';
     castleImage.style.background="0";
     bloBridge.style.backgroundImage = "url('images/blobridge.jpg')";
-    bloBridge.style.backgroundSize = '1024px 800px';
+    bloBridge.style.backgroundSize = '600px 400px';
     bloBridge.style.backgroundPosition = 'center';
     bloBridge.style.backgroundRepeat = 'no-repeat';
 }
 
+function upstairs() {
+    outputDiv.innerHTML = "<p>The black knight punches your head off.</p>";
+    goBackWood.style.display = 'none';
+    blackKnight.style.display = 'none';
+    doorNextToStaircase.style.display = 'none';
+    woodGoOut.style.display = 'none';
+    gameOverBridge.style.backgroundImage = "url('images/game-over.jpg')";
+    gameOverBridge.style.backgroundSize = '600px 400px';
+    gameOverBridge.style.backgroundPosition = 'center';
+    gameOverBridge.style.backgroundRepeat = 'no-repeat';
+    runAway.style.display = 'inline-block';
+    textCount += 1;
+    bridgeDeath = 3;
+}
+
 // go back that has the function of going back to the other side of the bridge
 goBack.addEventListener('click', goBackFunc);
+
+
 goBackWood.addEventListener('click', goBackFunc);
 
 // executes the outdivStone and outdivWood functions when you click on the castle of stone or castle of wood button
 castle1.addEventListener('click', outdivStone);
 castle2.addEventListener('click', outdivWood);
 
-// exectues the enterWoodCastle functions when you click on the enter button with the wooden castle
+// exectues the enterWoodCastle function when you click on the enter button with the wooden castle
 enterWood.addEventListener('click', enterWoodCastle);
 
 enterStone.addEventListener('click', enterStoneCastle);
 
 //inside the wooden castle buttons
 woodGoOut.addEventListener('click', goOutsideWood);
+blackKnight.addEventListener('click', upstairs);
 
 //inside the stone castle buttons
 stoneGoOut.addEventListener('click', goOutsideStone);
@@ -306,7 +326,7 @@ function displayNextStep(direction) {
         runAway.style.display = 'inline-block';
         bloForest.style.background = '0';
         sleepingTroll.style.backgroundImage = "url('images/sleepingtroll.png')";
-        sleepingTroll.style.backgroundSize = '1024px 800px';
+        sleepingTroll.style.backgroundSize = '600px 400px';
         sleepingTroll.style.backgroundPosition = 'center';
         sleepingTroll.style.backgroundRepeat = 'no-repeat';
     } else if (direction === objectThing.answer2) {
@@ -318,60 +338,60 @@ function displayNextStep(direction) {
         walkAcross.style.display = 'inline-block';
         bloForest.style.background="0";
         bloBridge.style.backgroundImage = "url('images/blobridge.jpg')";
-        bloBridge.style.backgroundSize = '1024px 800px';
+        bloBridge.style.backgroundSize = '600px 400px';
         bloBridge.style.backgroundPosition = 'center';
         bloBridge.style.backgroundRepeat = 'no-repeat';
         hideButtonsOne();
         walkAcrossCount += 1
         console.log(bridgeDeath);
     } else if (direction === objectThing.answer6 && randomer < 0.5) {
-            outputDiv.innerHTML += "<p>You pass the bridge safely. You see a road, leading you two places, you decide to go to the:</p>"
-            castle1.style.display = 'inline-block';
-            castle2.style.display = 'inline-block';
-            theRoad.style.backgroundImage = "url('images/fantasy_world_14_by_avengerb6_dgmjjdh-pre.jpg')";
-            theRoad.style.backgroundSize =' 1024px 800px';
-            theRoad.style.backgroundPosition ='center',
-            theRoad.style.backgroundRepeat = 'no-repeat';
-            continues.style.display = 'none';
-            runAway.style.display = 'none';
+        outputDiv.innerHTML += "<p>You pass the bridge safely. You see a road, leading you two places, you decide to go to the:</p>"
+        castle1.style.display = 'inline-block';
+        castle2.style.display = 'inline-block';
+        theRoad.style.backgroundImage = "url('images/fantasy_world_14_by_avengerb6_dgmjjdh-pre.jpg')";
+        theRoad.style.backgroundSize =' 600px 400px';
+        theRoad.style.backgroundPosition ='center',
+        theRoad.style.backgroundRepeat = 'no-repeat';
+        continues.style.display = 'none';
+        runAway.style.display = 'none';
+        walkAcross.style.display = 'none';
+        walkAcrossCount = 0;
+        randomer = Math.random();
+        console.log(randomer);
+        console.log(bridgeDeath);
+    } else if (direction === objectThing.answer6 && randomer > 0.5){
+        outputDiv.innerHTML += "<p>You hear the bridge starting to creak. You hurry over to the other side before something happens. You see a road, leading you two places, you decide to go to the:</p>"
+        console.log(bridgeDeath);
+        console.log(randomer);
+        castle1.style.display = 'inline-block';
+        castle2.style.display = 'inline-block';
+        theRoad.style.backgroundImage = "url('images/fantasy_world_14_by_avengerb6_dgmjjdh-pre.jpg')";
+        theRoad.style.backgroundSize =' 600px 400px';
+        theRoad.style.backgroundPosition ='center',
+        theRoad.style.backgroundRepeat = 'no-repeat';
+        continues.style.display = 'none';
+        runAway.style.display = 'none';
+        walkAcross.style.display = 'none';
+        walkAcrossCount = 0; 
+        bridgeDeath -= 1;
+        bridgeLives.innerHTML = `<p>Bridge tries left: ${bridgeDeath}</p>`
+        randomer = Math.random();
+        console.log(randomer);
+        console.log(bridgeDeath);
+        if (bridgeDeath === 0) {
+            outputDiv.innerHTML = "<p>The bridge broke. You fell down and died.</p>"
+            gameOverBridge.style.backgroundImage = "url('images/game-over.jpg')";
+            gameOverBridge.style.backgroundSize = '600px 400px';
+            gameOverBridge.style.backgroundPosition = 'center';
+            gameOverBridge.style.backgroundRepeat = 'no-repeat';
+            runAway.innerHTML = 'start over';
+            runAway.style.display = 'inline-block';
             walkAcross.style.display = 'none';
-            walkAcrossCount = 0;
-            randomer = Math.random();
-            console.log(randomer);
-            console.log(bridgeDeath);
-        } else if (direction === objectThing.answer6 && randomer > 0.5){
-            outputDiv.innerHTML += "<p>You hear the bridge starting to creak. You hurry over to the other side before something happens. You see a road, leading you two places, you decide to go to the:</p>"
-            console.log(bridgeDeath);
-            console.log(randomer);
-            castle1.style.display = 'inline-block';
-            castle2.style.display = 'inline-block';
-            theRoad.style.backgroundImage = "url('images/fantasy_world_14_by_avengerb6_dgmjjdh-pre.jpg')";
-            theRoad.style.backgroundSize =' 1024px 800px';
-            theRoad.style.backgroundPosition ='center',
-            theRoad.style.backgroundRepeat = 'no-repeat';
-            continues.style.display = 'none';
-            runAway.style.display = 'none';
-            walkAcross.style.display = 'none';
-            walkAcrossCount = 0; 
-            bridgeDeath -= 1;
-            bridgeLives.innerHTML = `<p>Bridge tries left: ${bridgeDeath}</p>`
-            randomer = Math.random();
-            console.log(randomer);
-            console.log(bridgeDeath);
-            if (bridgeDeath === 0) {
-                outputDiv.innerHTML = "<p>The bridge broke. You fell down and died.</p>"
-                gameOverBridge.style.backgroundImage = "url('images/game-over.jpg')";
-                gameOverBridge.style.backgroundSize = '1024px 800px';
-                gameOverBridge.style.backgroundPosition = 'center';
-                gameOverBridge.style.backgroundRepeat = 'no-repeat';
-                runAway.innerHTML = 'start over';
-                runAway.style.display = 'inline-block';
-                walkAcross.style.display = 'none';
-                castle1.style.display = 'none';
-                castle2.style.display = 'none';
-                textCount += 1;
-                bridgeDeath = 3;
-            }   
+            castle1.style.display = 'none';
+            castle2.style.display = 'none';
+            textCount += 1;
+            bridgeDeath = 3;
+        }   
     } else if (direction === objectThing.answer1 && count < 1) {
         outputDiv.innerHTML += "<p>You see no way through, you decide to go back.</p>";
         gameOver.style.display = 'none'
@@ -390,7 +410,7 @@ function displayNextStep(direction) {
         console.log('Game over')
         sleepingTroll.style.background='0';
         gameOverBridge.style.backgroundImage = "url('images/game-over.jpg')";
-        gameOverBridge.style.backgroundSize = '1024px 800px';
+        gameOverBridge.style.backgroundSize = '600px 400px';
         gameOverBridge.style.backgroundPosition = 'center';
         gameOverBridge.style.backgroundRepeat = 'no-repeat';
     } else if (direction === objectThing.answer5) {
@@ -400,7 +420,7 @@ function displayNextStep(direction) {
         inlineButtons();
         scaryTroll.style.background = '0';
         bloForest.style.backgroundImage = "url('images/bloforest.jpg')";
-        bloForest.style.backgroundSize = '1024px 800px';
+        bloForest.style.backgroundSize = '600px 400px';
         bloForest.style.backgroundPosition = 'center';
         bloForest.style.backgroundRepeat = 'no-repeat';
         if (direction === objectThing.answer5 && textCount > 0) {
