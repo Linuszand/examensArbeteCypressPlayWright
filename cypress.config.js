@@ -23,7 +23,8 @@ module.exports = defineConfig({
     baseUrl,
     supportFile: false,
     specPattern: "**/*.feature",
-    screenshotOnRunFailure: false,
+    screenshotOnRunFailure: true,
+    screenshotsFolder: 'cypress/downloads',
     setupNodeEvents
   }
 });

@@ -319,7 +319,7 @@ walkAcross.style.display = 'none';
 function displayNextStep(direction) {
     outputDiv.innerHTML = "";
     if (direction === objectThing.answer3) {
-        outputDiv.innerHTML += "<p>You come across a giant sleeping troll, do you continue or run away?</p>";
+        outputDiv.innerHTML += "<p>You come across a giant sleeping troll, do you fight or run away?</p>";
         runAway.innerHTML = 'run away'
         hideButtonsOne();
         continues.style.display = 'inline-block';
@@ -357,12 +357,8 @@ function displayNextStep(direction) {
         walkAcross.style.display = 'none';
         walkAcrossCount = 0;
         randomer = Math.random();
-        console.log(randomer);
-        console.log(bridgeDeath);
     } else if (direction === objectThing.answer6 && randomer > 0.5){
-        outputDiv.innerHTML += "<p>You hear the bridge starting to creak. You hurry over to the other side before something happens. You see a road, leading you two places, you decide to go to the:</p>"
-        console.log(bridgeDeath);
-        console.log(randomer);
+        outputDiv.innerHTML += "<p>You hear the bridge starting to creak. You hurry over to the other side before something happens. You see a road, leading you two places, you decide to go to the:</p>";
         castle1.style.display = 'inline-block';
         castle2.style.display = 'inline-block';
         theRoad.style.backgroundImage = "url('images/fantasy_world_14_by_avengerb6_dgmjjdh-pre.jpg')";
@@ -376,8 +372,6 @@ function displayNextStep(direction) {
         bridgeDeath -= 1;
         bridgeLives.innerHTML = `<p>Bridge tries left: ${bridgeDeath}</p>`
         randomer = Math.random();
-        console.log(randomer);
-        console.log(bridgeDeath);
         if (bridgeDeath === 0) {
             outputDiv.innerHTML = "<p>The bridge broke. You fell down and died.</p>"
             gameOverBridge.style.backgroundImage = "url('images/game-over.jpg')";

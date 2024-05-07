@@ -1,11 +1,12 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 const randomer = Math.random();
+let url = 'http://127.0.0.1:5500/index.html'
 
 
 
 test('Go to Castle of Stone and enter', async ({ page }) => {
-  await page.goto('http://127.0.0.1:5500/index.html');
+  await page.goto(url);
   await page.getByText('Where do you want to go, left, right or up?').isVisible();
   await page.getByRole('button', { name: 'up' }).click();
   await page.getByText('You see a bridge.').isVisible();
@@ -28,7 +29,7 @@ test('Go to Castle of Stone and enter', async ({ page }) => {
 });
 
 test('Go to Castle of Wood and enter', async ({page}) => {
-  await page.goto('http://127.0.0.1:5500/index.html');
+  await page.goto(url);
   await page.getByText('Where do you want to go, left, right or up?').isVisible();
   await page.getByRole('button', { name: 'up' }).click();
   await page.getByText('You see a bridge.').isVisible();
@@ -48,6 +49,11 @@ test('Go to Castle of Wood and enter', async ({page}) => {
     await page.getByText('As you enter the wooden castle, your gaze is immediately drawn to the black knight standing on the second level above the staircase. Its presence ominous, its armor gleaming darkly in the dim light. There are multiple pathways possible from here, you decide to:').isVisible();
     await page.getByRole('img', { name: 'images/image_ADS9BLZe_1713866202748_raw.jpg'}).isVisible();
   }
+});
+
+test('Deadend', async ({ page }) => {
+    await page.goto(url);
+    
 });
 
 

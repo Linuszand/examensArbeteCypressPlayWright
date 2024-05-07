@@ -9,15 +9,10 @@ test('Game over zero lives and start over', async ({page}) => {
     await page.getByRole('button', { name: 'walk across' }).click();
     let bridgeTriesLeft = 3;
 
-// Loop until bridgeTriesLeft becomes 0
+// loop until bridgeTriesLeft becomes 0
     while (bridgeTriesLeft > 0) {
-        // castle of stone button
         await page.getByRole('button', { name: 'castle of stone' }).click();
-        
-        // go back button
         await page.getByRole('button', { name: 'go back' }).click();
-
-        // walk across button
         await page.getByRole('button', { name: 'walk across' }).click();
 
         // update the bridgeTriesLeft value by getting the updated text content
