@@ -204,7 +204,7 @@ function enterWoodCastle() {
 }
 
 function enterStoneCastle() {
-    outputDiv.innerHTML = "<p>When you enter the stone castle, there only seems to be one way forward. You decide to:</p>"
+    outputDiv.innerHTML = "<p>You enter the stone castle. There's only one way forward. You decide to:</p>"
     stoneGoOut.appendChild(stoneGoOutText);
     document.body.appendChild(stoneGoOut);
     rightPassageWay.appendChild(rightPassageWayText);
@@ -430,3 +430,4 @@ function displayNextStep(direction) {
         }
     }
 }
+

@@ -8,6 +8,7 @@ button {
     border-radius: 20px;
     border-style:dashed;
     display: inline-block;
+    outline: #b724ab solid 3px;
 }
 
 button:hover{
@@ -34,6 +35,7 @@ html, body {
     margin: 15px;
     background: #000000;
     background-color: black;
+    outline: #7d51c4 solid 3px;
 }
 
 p {
@@ -44,27 +46,86 @@ p {
     text-shadow: -1px -1px 0 #000000, 1px -1px 0 #030303, -1px 1px 0 #000000, 1px 1px 0 #000000;
 }
 
+div {
+    outline: #af654c solid 3px;
+}
 
 #lives {
     position: absolute;
-    bottom: -1%;
-    right: 40%;
+    bottom: 10%;
+    right: 43%; 
 }
 
-@media (max-width: 500px) {
+@media (min-width: 1800px) and (max-height: 520px) {
+    #lives {
+        position: absolute;
+        bottom: 10%;
+        right: 46%;
+    }
+}
+
+@media (min-width: 1800px) and (max-height: 700px) {
+    #lives {
+        position: absolute;
+        bottom: 10%;
+        right: 46%;
+    }
+}
+
+@media (min-width: 1800px) and (max-height: 1000px) {
+    #lives {
+        position: absolute;
+        bottom: 10%;
+        right: 46%;
+    }
+}
+
+
+@media (max-width: 700px) {
     button {
         font-size: 5vw;
     }
-   
-}
-
-@media (max-height: 437px) {
     #lives {
         position: absolute;
-        bottom: -5%;
-        right: 40%;
+        bottom: 10%;
+        right: 38%;
     }
 }
+
+@media (max-width: 368px) {
+    #lives {
+        position: absolute;
+        bottom: 10%;
+        right: 28%;
+    }
+}
+
+@media (max-width: 200px) {
+    #lives {
+        position: absolute;
+        bottom: 10%;
+        right: 8%;
+    }
+}
+
+@media (max-width: 50px) {
+    #lives {
+        position: absolute;
+        bottom: 10%;
+        right: -20%;
+    }
+}
+
+
+@media (max-height: 722 ) {
+    #lives {
+        position: absolute;
+        bottom: 10%;
+        right: 38%;
+    }
+}
+
+
 
 
 @media (orientation: portrait) {
