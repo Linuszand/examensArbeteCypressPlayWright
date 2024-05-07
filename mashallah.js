@@ -186,7 +186,7 @@ function outdivWood() {
 
 // When you click the enter button for the wooden castle
 function enterWoodCastle() {
-    outputDiv.innerHTML = "<p>As you enter the wooden castle, your gaze is immediately drawn to the black knight standing on the second level above the staircase. Its presence ominous, its armor gleaming darkly in the dim light. There are multiple pathways possible from here, you decide to: </p>";
+    outputDiv.innerHTML = "<p>As you enter the wooden castle, your gaze is immediately drawn to the black knight standing on the second level above the staircase. Its presence ominous, its armor gleaming darkly in the dim light. There are multiple pathways possible from here, you decide to:</p>";
     castleStaircase.style.backgroundImage= "url('images/image_ADS9BLZe_1713866202748_raw.jpg')"
     castleWood.style.backgroundPosition = 'center';  
     castleWood.style.backgroundRepeat = 'no-repeat';
