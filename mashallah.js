@@ -7,6 +7,7 @@ let objectThing = {
     answer6: 'walk across'
 };
 
+
 let outputDiv = document.getElementById('output');
 let left = document.getElementById('left');
 let right = document.getElementById('right');
@@ -17,6 +18,7 @@ let gameOver = document.getElementById('game-over');
 let troll = document.getElementById('troll');
 let walkAcross = document.getElementById('walk-across')
 let bridgeLives = document.getElementById('lives');
+let victoryText = document.getElementById('victory');
 
 let leftValue;
 let rightValue;
@@ -35,6 +37,8 @@ let walkAcrossCount = 0;
 let randomer = Math.random();
 // How many times you can cross the bridge when it creaks
 let bridgeDeath = 3;
+
+let victory = document.createElement('h2');
 
 // buttons for when you click walk across button
 let castle1 = document.createElement('button');
@@ -71,6 +75,10 @@ let leftPassageWay = document.createElement('button');
 let leftPassageWayText = document.createTextNode('left passage');
 let rightPassageWay = document.createElement('button');
 let rightPassageWayText = document.createTextNode('go right');
+let corridorRight = document.createElement('button');
+let corridorLeft = document.createElement('button');
+let corridorRightText = document.createTextNode('right');
+let corridorLeftText = document.createTextNode('left');
 
 
 //images variables
@@ -85,6 +93,8 @@ let darkCastle = document.getElementById('the-body');
 let theRoad = document.getElementById('the-body');
 let gameOverBridge = document.getElementById('the-body');
 let gameOverKnight = document.getElementById('the-body');
+let woodenRoomCastle = document.getElementById('the-body');
+let stoneCorr = document.getElementById('the-body');
 bloForest.style.backgroundImage = "url('images/bloforest.jpg')";
 bloForest.style.backgroundSize = '600px 400px';
 bloForest.style.backgroundPosition = 'center';
@@ -274,6 +284,39 @@ function goBackFunc() {
     bloBridge.style.backgroundRepeat = 'no-repeat';
 }
 
+function woodForward() {
+    outputDiv.innerHTML = "<p>As you enter the room with the candle, you find inner peace within the light.</p>";
+    victoryText.innerHTML = "<h2>You've achieved victory. Start over?</h2>";
+    blackKnight.style.display = 'none';
+    doorNextToStaircase.style.display = 'none';
+    woodGoOut.style.display = 'none';
+    runAway.innerHTML = 'start over'
+    runAway.style.display = 'inline-block';
+    woodenRoomCastle.style.backgroundImage = "url('images/inner-peace.png')";
+    woodenRoomCastle.style.backgroundSize = '418px 92px';
+    woodenRoomCastle.style.backgroundPosition = 'center';
+    woodenRoomCastle.style.backgroundRepeat = 'no-repeat';
+    textCount += 1;
+    bridgeDeath = 3;
+}
+
+function stoneCorridor() {
+    outputDiv.innerHTML = "<p>You enter a corridor, you can either go left or right.</p>";
+    stoneGoOut.style.display = 'none';
+    rightPassageWay.style.display = 'none';
+    stoneCorr.style.backgroundImage = "url('images/stone-corridor-last.jpg')";
+    stoneCorr.style.backgroundSize = '600px 400px';
+    stoneCorr.style.backgroundPosition = 'center';
+    stoneCorr.style.backgroundRepeat = 'no-repeat';
+    corridorLeft.style.display = 'inline-block';
+    corridorRight.style.display = 'inline-block';
+    corridorLeft.appendChild(corridorLeftText);
+    document.body.appendChild(corridorLeft);
+    corridorRight.appendChild(corridorRightText);
+    document.body.appendChild(corridorRight);
+    
+}
+
 function upstairs() {
     outputDiv.innerHTML = "<p>The black knight punches your head off.</p>";
     goBackWood.style.display = 'none';
@@ -284,6 +327,36 @@ function upstairs() {
     gameOverBridge.style.backgroundSize = '600px 400px';
     gameOverBridge.style.backgroundPosition = 'center';
     gameOverBridge.style.backgroundRepeat = 'no-repeat';
+    runAway.innerHTML = 'start over';
+    runAway.style.display = 'inline-block';
+    textCount += 1;
+    bridgeDeath = 3;
+}
+
+function corridorLeftBtn() {
+    outputDiv.innerHTML = "<p>A demon blocks your path. It's hungry for you soul.</p>";
+    corridorLeft.style.display = 'none';
+    corridorRight.style.display = 'none';
+    gameOverBridge.style.backgroundImage = "url('images/game-over.jpg')";
+    gameOverBridge.style.backgroundSize = '600px 400px';
+    gameOverBridge.style.backgroundPosition = 'center';
+    gameOverBridge.style.backgroundRepeat = 'no-repeat';
+    runAway.innerHTML = 'start over';
+    runAway.style.display = 'inline-block';
+    textCount += 1;
+    bridgeDeath = 3;
+}
+
+function corridorRightBtn() {
+    outputDiv.innerHTML = "<p>You come across a treasure room, but realise you don't need that much gold. You find inner peace.</p>";
+    victoryText.innerHTML = "<h2>You've achieved victory. Start over?</h2>";
+    corridorLeft.style.display = 'none';
+    corridorRight.style.display = 'none';
+    woodenRoomCastle.style.backgroundImage = "url('images/inner-peace.png')";
+    woodenRoomCastle.style.backgroundSize = '418px 92px';
+    woodenRoomCastle.style.backgroundPosition = 'center';
+    woodenRoomCastle.style.backgroundRepeat = 'no-repeat';
+    runAway.innerHTML = 'start over';
     runAway.style.display = 'inline-block';
     textCount += 1;
     bridgeDeath = 3;
@@ -307,9 +380,13 @@ enterStone.addEventListener('click', enterStoneCastle);
 //inside the wooden castle buttons
 woodGoOut.addEventListener('click', goOutsideWood);
 blackKnight.addEventListener('click', upstairs);
+doorNextToStaircase.addEventListener('click', woodForward);
 
 //inside the stone castle buttons
 stoneGoOut.addEventListener('click', goOutsideStone);
+rightPassageWay.addEventListener('click', stoneCorridor);
+corridorLeft.addEventListener('click', corridorLeftBtn);
+corridorRight.addEventListener('click', corridorRightBtn);
 
 // hides the continue, run away and walk across button when you start the game
 continues.style.display = 'none';
@@ -318,6 +395,7 @@ walkAcross.style.display = 'none';
 
 function displayNextStep(direction) {
     outputDiv.innerHTML = "";
+    victoryText.innerHTML = "";
     if (direction === objectThing.answer3) {
         outputDiv.innerHTML += "<p>You come across a giant sleeping troll, do you fight or run away?</p>";
         runAway.innerHTML = 'run away'

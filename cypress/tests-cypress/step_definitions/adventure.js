@@ -22,24 +22,22 @@ When('I go back and forth until lives equals zero', () => {
     let bridgeValue = 'Bridge tries left: 3';
 
     function retryUntilZero() {
-        // Click "walk across" button
+        
         cy.get('#walk-across').click({ force: true });
 
-        // Check the bridge value
         cy.contains('Bridge tries left:').invoke('text').then((text) => {
             bridgeValue = text;
             if (bridgeValue !== 'Bridge tries left: 0') {
-                // Click "castle of stone" and "go back" buttons
                 cy.contains('castle of stone').click({ force: true });
                 cy.contains('go back').click({ force: true });
 
-                // Continue looping
+                // recursive
                 retryUntilZero();
             }
         });
     }
 
-    // Start the loop
+    // call function
     retryUntilZero();
 });
 
