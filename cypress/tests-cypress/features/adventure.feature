@@ -12,7 +12,8 @@ Feature: Test
         Given I've clicked the button "#up"
         When I click the button "walk across"
         When I click the button "castle of stone"
-        Then I should see the text "As you arrive before the ancient castle, its formidable presence looms large against the backdrop of the desolate landscape. The walls, dark as the night itself, stand tall and imposing, their surface gleaming dully in the subdued light of the overcast sky. You decide to:"
+        When I click the button "enter"
+        Then I should see the text "You enter the stone castle. There's only one way forward. You decide to:"
 
 
     Scenario: Enter castle of wood
@@ -26,6 +27,7 @@ Feature: Test
         Given I've clicked the button "#left"
         When I click the button "continue"
         Then I should see the text "GAME OVER"
+        Then I should see the image "game-over.jpg"
 
     Scenario: Game over bridge death
         Given I've clicked the button "#up"
