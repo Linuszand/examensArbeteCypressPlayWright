@@ -337,7 +337,7 @@ function corridorLeftBtn() {
     outputDiv.innerHTML = "<p>A demon blocks your path. It's hungry for you soul.</p>";
     corridorLeft.style.display = 'none';
     corridorRight.style.display = 'none';
-    gameOverBridge.style.backgroundImage = "url('images/game-over.jpg')";
+    gameOverBridge.style.backgroundImage = "url('images/demon-game-over.jpg')";
     gameOverBridge.style.backgroundSize = '600px 400px';
     gameOverBridge.style.backgroundPosition = 'center';
     gameOverBridge.style.backgroundRepeat = 'no-repeat';
@@ -348,7 +348,7 @@ function corridorLeftBtn() {
 }
 
 function corridorRightBtn() {
-    outputDiv.innerHTML = "<p>You come across a treasure room, but realise you don't need that much gold. You find inner peace.</p>";
+    outputDiv.innerHTML = "<p>You come across a treasure room, but realise you don't need that much gold, 'Nah, I don't need that shit'. You find inner peace.</p>";
     victoryText.innerHTML = "<h2>You've achieved victory. Start over?</h2>";
     corridorLeft.style.display = 'none';
     corridorRight.style.display = 'none';
@@ -364,17 +364,15 @@ function corridorRightBtn() {
 
 // go back that has the function of going back to the other side of the bridge
 goBack.addEventListener('click', goBackFunc);
-
-
 goBackWood.addEventListener('click', goBackFunc);
 
 // executes the outdivStone and outdivWood functions when you click on the castle of stone or castle of wood button
 castle1.addEventListener('click', outdivStone);
 castle2.addEventListener('click', outdivWood);
 
-// exectues the enterWoodCastle function when you click on the enter button with the wooden castle
+// enters wooden castle
 enterWood.addEventListener('click', enterWoodCastle);
-
+//enters stone castle
 enterStone.addEventListener('click', enterStoneCastle);
 
 //inside the wooden castle buttons
@@ -469,7 +467,7 @@ function displayNextStep(direction) {
         gameOver.style.display = 'none'
         count += 1;
     } else if (direction === objectThing.answer1 && count >= 1) {
-        outputDiv.innerHTML += "<p>You've already been here, stahp it.</p>";
+        outputDiv.innerHTML += "<p>You've already been here.</p>";
         gameOver.style.display = 'none'
         console.log(count)
     } else if (direction === objectThing.answer4) {
@@ -490,7 +488,6 @@ function displayNextStep(direction) {
         walkAcross.style.display = 'none';
         hideButtonsTwo();
         inlineButtons();
-        scaryTroll.style.background = '0';
         bloForest.style.backgroundImage = "url('images/bloforest.jpg')";
         bloForest.style.backgroundSize = '600px 400px';
         bloForest.style.backgroundPosition = 'center';

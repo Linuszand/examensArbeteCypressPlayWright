@@ -6,7 +6,7 @@ Feature: Test
     Scenario: Dead end
         Given I've clicked the button "#right"
         When I click the button "#right" again
-        Then I should see the text "You've already been here, stahp it."
+        Then I should see the text "You've already been here."
 
     Scenario: Castle of stone
         Given I've clicked the button "#up"

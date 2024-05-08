@@ -55,7 +55,7 @@ test('Deadend', async ({ page }) => {
     await page.goto(url);
     await page.getByRole('button', { name: 'right'}).click();
     await page.getByRole('button', { name: 'right'}).click();
-    await page.getByText("You've already been here, stahp it.").isVisible();
+    await page.getByText("You've already been here.").isVisible();
 });
 
 

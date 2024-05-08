@@ -8,7 +8,7 @@ button {
     border-radius: 20px;
     border-style:dashed;
     display: inline-block;
-    outline: #b724ab solid 3px;
+    /* outline: #b724ab solid 3px; */
 }
 
 button:hover{
@@ -37,20 +37,19 @@ html, body {
     margin: 15px;
     background: #000000;
     background-color: black;
-    outline: #7d51c4 solid 3px;
+    /* outline: #7d51c4 solid 3px; */
 }
 
 p {
     font-size: 20px;
+    margin-top: -10px;
     font-family: Helvetica;
     font-weight:bolder;
     color:rgb(4, 252, 78);
     text-shadow: -1px -1px 0 #000000, 1px -1px 0 #030303, -1px 1px 0 #000000, 1px 1px 0 #000000;
 }
 
-div {
-    outline: #af654c solid 3px;
-}
+
 
 #lives {
     position: absolute;
