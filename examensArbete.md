@@ -1,12 +1,11 @@
-
 # Titel
 
 | Namn                  | Ange för- och efternamn                                         |
 | --------------------- | --------------------------------------------------------------- |
-| Utbildning            | Ange vilken utbildning du läser                                 |
+| Utbildning            | PVT22 Programvarutestare                                        |
 | Uppdrags-givare       | ``Om du gjort exjobb på ett företag, annars tas denna ruta bort |
 | Handledare/examinator | Ange vem som handlett/examinerat examensarbetet                 |
-| Datum                 | Ange datum för inlämning                                        |
+| Datum                 | 2024-06-07                                                      |
 
 # Sammanfattning
 
@@ -22,12 +21,11 @@ Denna rubrik kan tas bort om det inte finns begrepp och förkortningar som behö
 
 Översätt inte bara förkortningens innebörd, utan förklara med egna ord vad det är för något. Till exempel:
 
-| Akronym | Hela namnet           | Beskrivning                                                                                              |
-| ---     | --------------------- | -------------------------------------------------------------------------------------------------------  |
-| UI      | User Interface        | Det vi som användare ser när vi besöker en hemsida samt interaktionen mellan sidan och användaren        |
-| ``      | ``                    | ``                                                                                                       |
-Innehåll
-
+| Akronym  | Hela namnet    | Beskrivning                                                                                           |
+| -------- | -------------- | ----------------------------------------------------------------------------------------------------- |
+| UI       | User Interface | Det användaren ser visuellt när hen besöker en hemsida samt interaktionen mellan sidan och användaren |
+| ``       | ``             | ``                                                                                                    |
+| Innehåll |                |                                                                                                       |
 
 # 1. Inledning
 
@@ -44,9 +42,12 @@ I examensarbetets inledning ska ni ge en kortfattad inledning till varför ni ju
 
 ## 1.1 Bakgrund
 
-Under min tid på LIAn testade vi olika produkter mest med Cypress, men vi fick även tips om ett testverktyg som heter Playwright. Jag har därför valt att jämföra Cypress och Playwrights för- och nackdelar. Huvudsaken till varför jag valde Playwright är för det känns relevant att testa ett modernare testverktyg mot ett äldre.
+Under LIA:n utfördes tester av olika produkter med användning av Cypress, och det presenterades även information om Playwright. Det ledde till ett beslut om att genomföra en jämförande analys av för- och nackdelarna hos Cypress och Playwright. Valet av Playwright motiverades p.g.a dess relevans som ett modernare testverktyg jämfört med det äldre Cypress.
 
-Jag börjar med att förklara de olika testverktygen och sedan går in på för- och nackdelar. Jag kommer jämföra för- och nackdelar:
+I dagsläget är det viktigt att ett testverktyg är enkelt att använda och har en bra och väl-strukturerad dokumentation för att effektivt kunna börja- och sedan skriva testkoden. Vilket testverktyg som används kan bero på många olika faktorer, såsom specifika arbetsuppgifter, tekniska krav, eller den tekniska miljön. Exempelvis 
+
+Här är de frågor som kommer att besvaras:
+
 1. Hur lätt det är att komma igång med testverktyget
 2. Hur lätt det är att skriva testkoden
 3. Om testverktyget har en informationsrik och lättförståelig dokumentation
@@ -54,8 +55,6 @@ Jag börjar med att förklara de olika testverktygen och sedan går in på för-
 5. Vilket testverktyg som är mest effektivt i olika områden av testning
 
 Cypress är ett front-end testverktyg som underlättar för programvarutestare att automatisera olika handlingar man gör när man besöker en sida. Handlingar i det här fallet är t.ex. att klicka på en knapp eller att kolla om en selektor existerar där den ska vara. Automatiseringen av dessa handlingar görs med hjälp av kod man skriver i Javascript. Det finns även ett skript man kan använda för att starta en UI över vad testkoden gör.
-
-
 
 Anledningen till att man automatiserar dessa handlingar är för att selektorerna på en sida kan uppdateras över tid. En annan anledning är att det är mycket mer effektivt och sparar tid från att behöva manuellt testa allting varje gång.
 
@@ -66,6 +65,7 @@ Beskriv vad ni ska göra i projektet och varför ni gör projektet. Som läsare 
 ## 1.2 Syfte
 
 <!-- Varför gör ni undersökningen och vad vill ni att undersökningen skall leda till. Själva syftet ska formuleras i en mening: ”Syftet med arbetet/uppsatsen är att......” -->
+
 Syftet med arbetet är att jämföra de två olika testverktygen Cypress och Playwright för att få en överblick över deras styrkor och svagheter och avgöra vilket testverktyg som ska användas för olika typ av testning.
 
 ## 1.3 Problemformulering
@@ -90,6 +90,11 @@ Vad ska jag jämföra för något mellan Cypress och Playwright?
 
 <!-- Här gör ni ett förtydligande av vad ni avser att INTE studera i ert arbete. Detta görs för att det inte ska finnas förväntningar från opponent/läsare att det finns med. Att välja fokus är att avgränsa sig på ett mjukare sätt. Att välja fokus innebär att studenten motiverar varför vissa inriktningar väljs eller väljs bort. -->
 
+Fokus:
+
+1. Dokumentation av installering av testverkyget
+2. Dokumentation av UI
+3. Fördelar
 
 ## 1.5 Metod/Arbetssätt
 
