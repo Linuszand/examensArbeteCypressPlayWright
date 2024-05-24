@@ -46,12 +46,7 @@ I examensarbetets inledning ska ni ge en kortfattad inledning till varför ni ju
 
 Under min tid på LIAn testade vi olika produkter mest med Cypress, men vi fick även tips om ett testverktyg som heter Playwright. Jag har därför valt att jämföra Cypress och Playwrights för- och nackdelar. Huvudsaken till varför jag valde Playwright är för det känns relevant att testa ett modernare testverktyg mot ett äldre.
 
-Jag börjar med att förklara de olika testverktygen och sedan går in på för- och nackdelar. Jag kommer jämföra för- och nackdelar:
-1. Hur lätt det är att komma igång med testverktyget
-2. Hur lätt det är att skriva testkoden
-3. Om testverktyget har en informationsrik och lättförståelig dokumentation
-4. Om testverktyget ger en effektivt och snygg visuell display av testkoden (UI)
-5. Vilket testverktyg som är mest effektivt i olika områden av testning
+
 
 Cypress är ett front-end testverktyg som underlättar för programvarutestare att automatisera olika handlingar man gör när man besöker en sida. Handlingar i det här fallet är t.ex. att klicka på en knapp eller att kolla om en selektor existerar där den ska vara. Automatiseringen av dessa handlingar görs med hjälp av kod man skriver i Javascript. Det finns även ett skript man kan använda för att starta en UI över vad testkoden gör.
 
@@ -76,15 +71,16 @@ Vad ska göras i arbetet? Med utgångspunkt från syftet ska ni här formulera k
 
 <!-- Frågeställningarna ska inte vara ja-och nejfrågor utan öppna frågor, t.ex. hur kan… på vilket sätt… ? -->
 
-Vad bör Cypress och Playwright prioritera när det gäller testning?
+Hur bra grafiskt gränssnitt har Playwright jämfört med Cypress?
 
-Hur ska jag jämföra Cypress och Playwright?
+Hur användarvänligt är Playwright jämfört med Cypress?
 
-Hur är jag säker på att  Playwright är bättre än Cypress?
+Hur lätt är det att skriva testkoden i Playwright jämfört med Cypress?
 
-Hur är jag säker på att  Playwright är sämre än Cypress?
+Hur lätt är det att komma igång med Playwright jämfört med Cypress?
 
-Vad ska jag jämföra för något mellan Cypress och Playwright?
+Hur bra förklarat är testkoden i Playwright jämfört med Cypress?
+
 
 ## 1.4 Avgränsningar och fokus
 
@@ -92,6 +88,8 @@ Vad ska jag jämföra för något mellan Cypress och Playwright?
 
 
 ## 1.5 Metod/Arbetssätt
+
+Jag har för avsikt att avgöra om vilket testverktyg mellan Playwright och Cypress som är bäst genom att testa dem på ett spel. Testerna utgår ifrån dokumentation som har skrivits för de två olika testverktygen.
 
 <!-- Hur ska arbetet/undersökningen genomföras? Alla undersökningar genomförs med kända och väl verifierade metoder. Dessa lämpar sig för olika typer av syften. Det är viktigt att metoden överensstämmer med syftet, liksom att ni väljer rätt verktyg för undersökningen av problemet.
 
@@ -172,6 +170,8 @@ Under alla figurer måste anges figurnummer och figurtext. Figurer i kapitel X n
 När ni redovisar ert resultat ska ni inte blanda in egna upplevelser, känslor eller någon analys. Ni ska enbart beskriva utfallet på er undersökning/arbete och enbart det som är centralt för resultatet. Så den här texten och/eller redovisning är saklig, formell och ”torr” och ni sparar era personliga reflektioner till texten under rubriken Diskussion. Mottagaren ska kunna se en röd tråd som löper från Bakgrund med syftet, avgränsningar och metodbeskrivning, och tydligt se hur detta leder fram till resultatet.
 
 Har ni ställt frågor enligt ett frågeformulär är det lämpligt att redovisa svaren i en figur eller tabell. -->
+
+
 
 # 4. Diskussion
 
