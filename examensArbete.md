@@ -1,12 +1,11 @@
-
 # Titel
 
 | Namn                  | Ange för- och efternamn                                         |
 | --------------------- | --------------------------------------------------------------- |
-| Utbildning            | Ange vilken utbildning du läser                                 |
+| Utbildning            | PVT22 Programvarutestare                                        |
 | Uppdrags-givare       | ``Om du gjort exjobb på ett företag, annars tas denna ruta bort |
 | Handledare/examinator | Ange vem som handlett/examinerat examensarbetet                 |
-| Datum                 | Ange datum för inlämning                                        |
+| Datum                 | 2024-06-07                                                      |
 
 # Sammanfattning
 
@@ -22,12 +21,11 @@ Denna rubrik kan tas bort om det inte finns begrepp och förkortningar som behö
 
 Översätt inte bara förkortningens innebörd, utan förklara med egna ord vad det är för något. Till exempel:
 
-| Akronym | Hela namnet           | Beskrivning                                                                                              |
-| ---     | --------------------- | -------------------------------------------------------------------------------------------------------  |
-| UI      | User Interface        | Det vi som användare ser när vi besöker en hemsida samt interaktionen mellan sidan och användaren        |
-| ``      | ``                    | ``                                                                                                       |
-Innehåll
-
+| Akronym  | Hela namnet    | Beskrivning                                                                                           |
+| -------- | -------------- | ----------------------------------------------------------------------------------------------------- |
+| UI       | User Interface | Det användaren ser visuellt när hen besöker en hemsida samt interaktionen mellan sidan och användaren |
+| ``       | ``             | ``                                                                                                    |
+| Innehåll |                |                                                                                                       |
 
 # 1. Inledning
 
@@ -50,8 +48,6 @@ Under min tid på LIAn testade vi olika produkter mest med Cypress, men vi fick 
 
 Cypress är ett front-end testverktyg som underlättar för programvarutestare att automatisera olika handlingar man gör när man besöker en sida. Handlingar i det här fallet är t.ex. att klicka på en knapp eller att kolla om en selektor existerar där den ska vara. Automatiseringen av dessa handlingar görs med hjälp av kod man skriver i Javascript. Det finns även ett skript man kan använda för att starta en UI över vad testkoden gör.
 
-
-
 Anledningen till att man automatiserar dessa handlingar är för att selektorerna på en sida kan uppdateras över tid. En annan anledning är att det är mycket mer effektivt och sparar tid från att behöva manuellt testa allting varje gång.
 
 <!-- Under rubriken bakgrund skall ni beskriva bakgrunden till arbetet. Det är orsakerna till och beskrivningen av problemet, eller företagets situation, som skall beskrivas.
@@ -61,6 +57,7 @@ Beskriv vad ni ska göra i projektet och varför ni gör projektet. Som läsare 
 ## 1.2 Syfte
 
 <!-- Varför gör ni undersökningen och vad vill ni att undersökningen skall leda till. Själva syftet ska formuleras i en mening: ”Syftet med arbetet/uppsatsen är att......” -->
+
 Syftet med arbetet är att jämföra de två olika testverktygen Cypress och Playwright för att få en överblick över deras styrkor och svagheter och avgöra vilket testverktyg som ska användas för olika typ av testning.
 
 ## 1.3 Problemformulering
@@ -86,6 +83,11 @@ Hur bra förklarat är testkoden i Playwright jämfört med Cypress?
 
 <!-- Här gör ni ett förtydligande av vad ni avser att INTE studera i ert arbete. Detta görs för att det inte ska finnas förväntningar från opponent/läsare att det finns med. Att välja fokus är att avgränsa sig på ett mjukare sätt. Att välja fokus innebär att studenten motiverar varför vissa inriktningar väljs eller väljs bort. -->
 
+Fokus:
+
+1. Dokumentation av installering av testverkyget
+2. Dokumentation av UI
+3. Fördelar
 
 ## 1.5 Metod/Arbetssätt
 
