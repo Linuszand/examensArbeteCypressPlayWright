@@ -26,6 +26,7 @@ Denna rubrik kan tas bort om det inte finns begrepp och förkortningar som behö
 | ---     | --------------------- | -------------------------------------------------------------------------------------------------------  |
 | UI      | User Interface        | Det vi som användare ser när vi besöker en hemsida samt interaktionen mellan sidan och användaren        |
 | ``      | ``                    | ``                                                                                                       |
+
 Innehåll
 
 
@@ -164,6 +165,43 @@ Tabeller & Figurer
 Under alla figurer måste anges figurnummer och figurtext. Figurer i kapitel X numreras löpande, Figur X.1, Figur X.2 etc. I löpande text refererar man till figurerna genom att skriva exempelvis ’Experimentuppställningen visas i Figur 3.2’. Tabeller numreras löpande liksom figurerna, Tabell X.1, Tabell X.2 med tabelltexten ovanför tabellen. -->
 
 # 3. Resultat
+
+## 3.1 Hastighet
+
+Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur snabbt alla tester genomförs. När testerna genomförs med Cypress exekveras testerna en efter en. I Playwright finns det en tid som går att observeras för varje test. I Cypress finns en total tid för alla tester, men inte för varje enskilt test.
+
+**Playwrights tester** 
+
+![Alt text](images/playwrighthastighet.png)
+
+**Cypress tester**
+
+![Alt text](images/cypresshastighet.png)
+
+
+## 3.2 Användervänlighet
+### Testkörning
+
+**Playwright**
+1. Skriv kommandot/skriptet: `npx playwright test --ui` i terminalen.
+2. Ett fönster bör dyka upp med det grafiska gränsnittet för testerna.
+3. Starta testerna.
+
+**Cypress**
+1. Skriv kommandot/skriptet: `npx cypress open` i terminalen.
+2. Ett fönster bör dyka upp.
+3. Tryck på E2E testing.
+4. Tryck på den webbläsare du vill använda för testning.
+5. Tryck på den fil du vill testa.
+6. Starta testerna.
+
+Ovan ser ni att Playwright har en enklare process för att starta testerna i det grafiska gränssnittet. Det som Cypress vinner på är kommandot/skriptet, vilket är aningen kortare. Det är dock ingen större vinst, eftersom namnet på skriptet manuellt kan ändras i package.json filen.
+
+
+
+### Browsers
+
+Playwright 
 
 <!-- Här redovisar ni objektivt och utan värderingar era iakttagelser på ett strukturerat sätt vad ni kommit fram till i er undersökning/arbete. Hur blev det? Vad blev resultatet?
 

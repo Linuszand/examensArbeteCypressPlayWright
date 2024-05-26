@@ -9,8 +9,12 @@ test('Game over zero lives and start over', async ({page}) => {
     await page.getByRole('button', { name: 'walk across' }).click();
     let bridgeTriesLeft = 3;
 
-// loop until bridgeTriesLeft becomes 0
-    while (bridgeTriesLeft > 0) {
+    // Recursive function to handle the bridge tries
+    async function tryCrossingBridge(page, bridgeTriesLeft) {
+        if (bridgeTriesLeft <= 0) {
+            return;
+        }
+
         await page.getByRole('button', { name: 'castle of stone' }).click();
         await page.getByRole('button', { name: 'go back' }).click();
         await page.getByRole('button', { name: 'walk across' }).click();
@@ -20,14 +24,21 @@ test('Game over zero lives and start over', async ({page}) => {
         const matches = bridgeTriesText.match(/Bridge tries left: (\d+)/);
         if (matches && matches[1]) {
             bridgeTriesLeft = parseInt(matches[1]);
+            // Recursive call with updated bridgeTriesLeft value
+            await tryCrossingBridge(page, bridgeTriesLeft);
         } else {
-          console.log('Cannot parseInt...');
+            console.log('Cannot parseInt...');
         }
     }
+
+    // Start the recursive function
+    await tryCrossingBridge(page, bridgeTriesLeft);
+
     await page.getByRole('img', {name: 'images/game-over.jpg'}).isVisible();
     await page.getByRole('button', {name: 'start over'}).click();
     await page.getByText('Where do you want to go, left right or up?').isVisible();
 });
+
 
 test('Game over troll run away, then continue', async ({page}) => {
     await page.goto('http://127.0.0.1:5500/index.html');
