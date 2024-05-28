@@ -305,14 +305,14 @@ Observera att det bara finns en total tid för alla test.
 
 **Playwright Installation**
 
-![PlaywrightInstall](images\playwrightInstallation.png)
+![PlaywrightInstall](images/playwrightInstallation.png)
 
 **Cypress Installation**
 
 `npm init`
 
-![NpmInit](images\npminit.png)
+![NpmInit](images/npminit.png)
 
 `npm install cypress --save-dev`
 
-![CypressInstall](images\CypressInstallation.png)
+![CypressInstall](images/CypressInstallation.png)
