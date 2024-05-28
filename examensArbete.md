@@ -10,7 +10,7 @@
 
 # Sammanfattning
 
-Detta är en sida som skall sitta direkt efter titelsidan. Den innehåller först och främst en sammanfattning av innehållet i rapporten. Sammanfattningen ska innehålla bakgrund/inledning, beskrivning av examensarbetets genomförande samt resultat i korthet.
+<!-- Detta är en sida som skall sitta direkt efter titelsidan. Den innehåller först och främst en sammanfattning av innehållet i rapporten. Sammanfattningen ska innehålla bakgrund/inledning, beskrivning av examensarbetets genomförande samt resultat i korthet.
 
 I sammanfattningen ska det endast redovisa resultat, slutsatser eller annat som finns med i själva arbetet. Finns det inte med i texten ska det inte stå med här.
 
@@ -20,11 +20,11 @@ Inled arbetet med att lista (i bokstavsordning och gärna i tabellformat) alla f
 
 Denna rubrik kan tas bort om det inte finns begrepp och förkortningar som behöver förklaras.
 
-Översätt inte bara förkortningens innebörd, utan förklara med egna ord vad det är för något. Till exempel:
+Översätt inte bara förkortningens innebörd, utan förklara med egna ord vad det är för något. Till exempel: -->
 
 | Akronym | Hela namnet           | Beskrivning                                                                                              |
 | ---     | --------------------- | -------------------------------------------------------------------------------------------------------  |
-| UI      | User Interface        | Det vi som användare ser när vi besöker en hemsida samt interaktionen mellan sidan och användaren        |
+| UI      | User Interface        | Det användaren ser när hen besöker en hemsida samt interaktionen mellan sidan och användaren        |
 | ``      | ``                    | ``                                                                                                       |
 
 Innehåll
@@ -62,7 +62,7 @@ Beskriv vad ni ska göra i projektet och varför ni gör projektet. Som läsare 
 ## 1.2 Syfte
 
 <!-- Varför gör ni undersökningen och vad vill ni att undersökningen skall leda till. Själva syftet ska formuleras i en mening: ”Syftet med arbetet/uppsatsen är att......” -->
-Syftet med arbetet är att jämföra de två olika testverktygen Cypress och Playwright för att få en överblick över deras styrkor och svagheter och avgöra vilket testverktyg som ska användas för olika typ av testning.
+Syftet med arbetet är att jämföra de två olika testverktygen Cypress och Playwright för att få en överblick över deras styrkor och svagheter med fokus på det grafiska gränssnittet, användarvänlighet, installation, syntax och andra relevanta aspekter om tid finns.
 
 ## 1.3 Problemformulering
 
@@ -78,9 +78,9 @@ Hur användarvänligt är Playwright jämfört med Cypress?
 
 Hur lätt är det att skriva testkoden i Playwright jämfört med Cypress?
 
-Hur lätt är det att komma igång med Playwright jämfört med Cypress?
+Hur lätt är det att installera Playwright jämfört med Cypress?
 
-Hur bra förklarat är testkoden i Playwright jämfört med Cypress?
+Hur olik är syntaxen i Playwright jämfört med Cypress?
 
 
 ## 1.4 Avgränsningar och fokus
@@ -90,7 +90,7 @@ Hur bra förklarat är testkoden i Playwright jämfört med Cypress?
 
 ## 1.5 Metod/Arbetssätt
 
-Jag har för avsikt att avgöra om vilket testverktyg mellan Playwright och Cypress som är bäst genom att testa dem på ett spel. Testerna utgår ifrån dokumentation som har skrivits för de två olika testverktygen.
+Jag har för avsikt att avgöra vilket testverktyg mellan Playwright och Cypress som är bäst genom att testa dem på ett spel. Testerna utgår ifrån dokumentation som har skrivits för de två olika testverktygen. Det grafiska gränssnittet och testverktygens användervänligt kommer att baseras på observationer vid exekvering av tester.
 
 <!-- Hur ska arbetet/undersökningen genomföras? Alla undersökningar genomförs med kända och väl verifierade metoder. Dessa lämpar sig för olika typer av syften. Det är viktigt att metoden överensstämmer med syftet, liksom att ni väljer rätt verktyg för undersökningen av problemet.
 
@@ -170,17 +170,7 @@ Under alla figurer måste anges figurnummer och figurtext. Figurer i kapitel X n
 
 Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur snabbt alla tester genomförs. När testerna genomförs med Cypress exekveras testerna en efter en. I Playwright finns det en tid som går att observeras för varje test. I Cypress finns en total tid för alla tester, men inte för varje enskilt test.
 
-**Playwrights tester** 
-
-![Alt text](images/playwrighthastighet.png)
-
-**Cypress tester**
-
-![Alt text](images/cypresshastighet.png)
-
-
-## 3.2 Användervänlighet
-### Testkörning
+## 3.2 Användarvänlighet och grafiskt gränssnitt
 
 **Playwright**
 1. Skriv kommandot/skriptet: `npx playwright test --ui` i terminalen.
@@ -195,21 +185,39 @@ Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur 
 5. Tryck på den fil du vill testa.
 6. Starta testerna.
 
-Ovan ser ni att Playwright har en enklare process för att starta testerna i det grafiska gränssnittet. Det som Cypress vinner på är kommandot/skriptet, vilket är aningen kortare. Det är dock ingen större vinst, eftersom namnet på skriptet manuellt kan ändras i package.json filen.
+Ovan ser ni att Playwright har en kortare process för att starta testerna i det grafiska gränssnittet. Det som Cypress vinner på är kommandot/skriptet, vilket är aningen kortare. Det är dock ingen större vinst, eftersom namnet på skriptet manuellt kan ändras i package.json filen.
+Playwright har också allt samlat på ett ställe och det gör att interaktionen mellan användaren och verktyget effektiviseras. I Cypress behöver användaren gå fram och tillbaka om hen vill ändra vilken webbläsare som ska testas.
 
+## 3.3 Webbläsare
 
+Playwright stödjer Chromium, Firefox, WebKit, Google Chrome och Microsoft Edge, medan Cypress stödjer Chromium, Firefox, Google Chrome, Microsoft Edge och Electron. Det faktum att Playwright har ett mer omfattande stöd för WebKit är en fördel för dem som vill testa webbläsare för mobila enheter.
 
-### Browsers
+## 3.4 Syntax
 
-Playwright 
+Både Cypress och Playwright använder sig av asynkrona tester. Det innebär att koden kan köras oberoende av varandra. De huvudsakliga skillnaderna mellan Playwright och Cypress är att Playwright använder sig av `async` och `await` syntax för att hantera de asynkrona processerna t.ex. `await page.getByRole('button', { name: 'up' }).click()` och att varje test funktion använder sig av ett argument "page": `test('example test', async ({ page })`. Cypress använder sig mycket av kod som "kedjas" ihop t.ex. `cy.get("selector").should('be.visible')`. Cypress behöver inte använda några argument som "page" i testkoden, men det är ett alternativ: `it('example test', (frivilliga argument här)`.
+
+## 3.5 Installation
+
+Playwright och Cypress har tydlig information om hur installationen av testverktyget går till:
+
+**Playwright**
+
+1. Skriv `npm init playwright@latest` i terminalen.
+2. Gå igenom alla steg som dyker upp i terminalen.
+
+**Cypress**
+1. Skriv `npm init` i terminalen.
+2. Gå igenom alla steg som dyker upp i terminalen
+3. skriv `npm install cypress --save-dev` i terminalen
+
+Playwright har en kortare process för installationen eftersom det bara behövs ett kommando.
+
 
 <!-- Här redovisar ni objektivt och utan värderingar era iakttagelser på ett strukturerat sätt vad ni kommit fram till i er undersökning/arbete. Hur blev det? Vad blev resultatet?
 
 När ni redovisar ert resultat ska ni inte blanda in egna upplevelser, känslor eller någon analys. Ni ska enbart beskriva utfallet på er undersökning/arbete och enbart det som är centralt för resultatet. Så den här texten och/eller redovisning är saklig, formell och ”torr” och ni sparar era personliga reflektioner till texten under rubriken Diskussion. Mottagaren ska kunna se en röd tråd som löper från Bakgrund med syftet, avgränsningar och metodbeskrivning, och tydligt se hur detta leder fram till resultatet.
 
 Har ni ställt frågor enligt ett frågeformulär är det lämpligt att redovisa svaren i en figur eller tabell. -->
-
-
 
 # 4. Diskussion
 
@@ -252,6 +260,7 @@ Aldskogius, H., & Rydqvist, B. (2018). Den friska människan: anatomi och fysiol
 
 Internet
 
+
 Folkhälsomyndigheten. (8 oktober 2019). Sjukdomsinformation om influensa. https://www.folkhalsomyndigheten.se/smittskydd-beredskap/smittsamma-sjukdomar/influensa-/
 
 Browserstack. (14 Februrari 2023) Cypress vs Selenium: Key Differences. https://www.browserstack.com/guide/cypress-vs-selenium 
@@ -267,8 +276,43 @@ Internet
 
 Rhodin, M. (2018). Projekt Islandshäst. Rörelseforskning på häst och ryttare – en forskarblogg från SLU. [Blogg]. 17 maj. http://blogg.slu.se/rorelseforskning/2018/05/17/projekt-islandshast/ [2020-02-06] -->
 
+Internet
+
+cuketest.com - Dokumentation om vilka webbläsare som stödjs av Playwright. https://www.cuketest.com/playwright/docs/browsers/ 
+
+docs.cypress.io - Dokumentation om vilka webbläsare som stöjds av Cypress. https://docs.cypress.io/guides/guides/launching-browsers#Browser-versions-supported [2024-03-24]
+
+playwright.dev - Dokumentation om installation av Playwright. https://playwright.dev/docs/intro#installing-playwright
+
+
 # Bilagor
 
 <!-- I bilagor samlas allt som inte är nödvändigt för att följa och förstå framställningen i huvuddelen, t.ex. intervjufrågor, materialdata, omfattande beräkningar och programkoder eller detaljerade metodbeskrivningar. Här kan man också placera figurer som är för stora för att infoga i den löpande texten. Bilagorna skall utformas så att de kan fungera som självständiga dokument, dvs man skall inte behöva läsa i huvuddelen för att kunna förstå innehållet i respektive bilaga. Bilagornas sidor numreras för sig.
 
 --- -->
+
+**Playwrights tester** 
+
+Observera att varje test har en tid.
+
+![Alt text](images/playwrighthastighet.png)
+
+**Cypress tester**
+
+Observera att det bara finns en total tid för alla test.
+
+![Alt text](images/cypresshastighet.png)
+
+**Playwright Installation**
+
+![PlaywrightInstall](images\playwrightInstallation.png)
+
+**Cypress Installation**
+
+`npm init`
+
+![NpmInit](images\npminit.png)
+
+`npm install cypress --save-dev`
+
+![CypressInstall](images\CypressInstallation.png)
