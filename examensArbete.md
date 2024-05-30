@@ -184,7 +184,7 @@ Under alla figurer måste anges figurnummer och figurtext. Figurer i kapitel X n
 
 ## 3.1 Hastighet
 
-Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur snabbt alla tester genomförs. När testerna genomförs med Cypress exekveras testerna en efter en. I Playwright finns det en tid som går att observeras för varje test.[[1]](#bilaga-1) I Cypress finns en total tid för alla tester, men inte för varje enskilt test.
+Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur snabbt alla tester genomförs. När testerna genomförs med Cypress exekveras testerna en efter en. I Playwright finns det en tid som går att observeras för varje test.[[1]](#bilaga-1) I Cypress finns en total tid för alla tester, men inte för varje enskilt test.[[2]](#bilaga-2)
 
 ## 3.2 Användarvänlighet och grafiskt gränssnitt
 
@@ -218,13 +218,13 @@ Playwright och Cypress har tydlig information om hur installationen av testverkt
 
 **Playwright**
 
-1. Skriv `npm init playwright@latest` i terminalen.
+1. Skriv `npm init playwright@latest` i terminalen.[[3]](#bilaga-3)
 2. Gå igenom alla steg som dyker upp i terminalen.
 
 **Cypress**
-1. Skriv `npm init` i terminalen.
-2. Gå igenom alla steg som dyker upp i terminalen
-3. skriv `npm install cypress --save-dev` i terminalen
+1. Skriv `npm init` i terminalen.[[4]](#bilaga-4)
+2. Gå igenom alla steg som dyker upp i terminalen.
+3. skriv `npm install cypress --save-dev` i terminalen.[[5]](#bilaga-5)
 
 Playwright har en kortare process för installationen eftersom det bara behövs ett kommando.
 
@@ -352,20 +352,22 @@ playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev
 
 **Cypress tester**
 
-Observera att det bara finns en total tid för alla test.
+<a name="bilaga-2"></a>Observera att det bara finns en total tid för alla test.
 
 ![HastighetCypress](images/cypresshastighet.png)
 
 **Playwright Installation**
 
+<a name="bilaga-3"></a>npm init playwright@latest
+
 ![PlaywrightInstall](images/playwrightInstallation.png)
 
 **Cypress Installation**
 
-`npm init`
+<a name="bilaga-4"></a>npm init
 
 ![NpmInit](images/npminit.png)
 
-`npm install cypress --save-dev`
+<a name="bilaga-5"></a>npm install cypress --save-dev
 
 ![CypressInstall](images/CypressInstallation.png)
