@@ -336,8 +336,6 @@ docs.cypress.io - Dokumentation om vilka webbläsare som stöjds av Cypress. htt
 playwright.dev - Dokumentation om installation av Playwright. https://playwright.dev/docs/intro#installing-playwright
 playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev/docs/writing-tests#first-test
 
-
-
 # Bilagor
 
 <!-- I bilagor samlas allt som inte är nödvändigt för att följa och förstå framställningen i huvuddelen, t.ex. intervjufrågor, materialdata, omfattande beräkningar och programkoder eller detaljerade metodbeskrivningar. Här kan man också placera figurer som är för stora för att infoga i den löpande texten. Bilagorna skall utformas så att de kan fungera som självständiga dokument, dvs man skall inte behöva läsa i huvuddelen för att kunna förstå innehållet i respektive bilaga. Bilagornas sidor numreras för sig.
@@ -358,16 +356,22 @@ playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev
 
 **Playwright Installation**
 
-<a name="bilaga-3"></a>npm init playwright@latest
+<a name="bilaga-3"></a>
+
+`npm init playwright@latest`
 
 ![PlaywrightInstall](images/playwrightInstallation.png)
 
 **Cypress Installation**
 
-<a name="bilaga-4"></a>npm init
+<a name="bilaga-4"></a>
+
+`npm init`
 
 ![NpmInit](images/npminit.png)
 
-<a name="bilaga-5"></a>npm install cypress --save-dev
+<a name="bilaga-5"></a>
+
+`npm install cypress --save-dev`
 
 ![CypressInstall](images/CypressInstallation.png)
