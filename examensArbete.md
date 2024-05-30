@@ -204,6 +204,7 @@ Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur 
 
 Ovan ser ni att Playwright har en kortare process för att starta testerna i det grafiska gränssnittet. Det som Cypress vinner på är kommandot/skriptet, vilket är aningen kortare. Det är dock ingen större vinst, eftersom namnet på skriptet manuellt kan ändras i package.json filen.
 Playwright har också allt samlat på ett ställe och det gör att interaktionen mellan användaren och verktyget effektiviseras. I Cypress behöver användaren gå fram och tillbaka om hen vill ändra vilken webbläsare som ska testas.
+
 <a name="back-7"></a>
 <a name="back-8"></a>
 Både Playwright och Cypress har en "selector" knapp som underlättar för användaren när hen skriver tester.[[7]](#bilaga-7)[[8]](#bilaga-8)
