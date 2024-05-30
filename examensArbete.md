@@ -183,7 +183,8 @@ Under alla figurer måste anges figurnummer och figurtext. Figurer i kapitel X n
 # 3. Resultat
 
 ## 3.1 Hastighet
-
+<a name="back-1"></a>
+<a name="back-2"></a>
 Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur snabbt alla tester genomförs. När testerna genomförs med Cypress exekveras testerna en efter en. I Playwright finns det en tid som går att observeras för varje test.[[1]](#bilaga-1) I Cypress finns en total tid för alla tester, men inte för varje enskilt test.[[2]](#bilaga-2)
 
 ## 3.2 Användarvänlighet och grafiskt gränssnitt
@@ -217,7 +218,9 @@ Playwright har också stöd för parallell körning av alla tester med varje web
 Playwright och Cypress har tydlig information om hur installationen av testverktyget går till:
 
 **Playwright**
-
+<a name="back-3"></a>
+<a name="back-4"></a>
+<a name="back-5"></a>
 1. Skriv `npm init playwright@latest` i terminalen.[[3]](#bilaga-3)
 2. Gå igenom alla steg som dyker upp i terminalen.
 
@@ -344,13 +347,17 @@ playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev
 
 **Playwrights tester** 
 
-<a name="bilaga-1"></a>Observera att varje test har en tid
+<a name="bilaga-1"></a>
+
+Observera att varje test har en tid.[Tillbaka](#back-1)
 
  ![HastighetPlaywright](images/playwrighthastighet.png)
 
 **Cypress tester**
 
-<a name="bilaga-2"></a>Observera att det bara finns en total tid för alla test.
+<a name="bilaga-2"></a>
+
+Observera att det bara finns en total tid för alla test.[Tillbaka](#back-2)
 
 ![HastighetCypress](images/cypresshastighet.png)
 
@@ -358,7 +365,7 @@ playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev
 
 <a name="bilaga-3"></a>
 
-`npm init playwright@latest`
+`npm init playwright@latest`[Tillbaka](#back-3)
 
 ![PlaywrightInstall](images/playwrightInstallation.png)
 
@@ -366,12 +373,12 @@ playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev
 
 <a name="bilaga-4"></a>
 
-`npm init`
+`npm init`[Tillbaka](#back-4)
 
 ![NpmInit](images/npminit.png)
 
 <a name="bilaga-5"></a>
 
-`npm install cypress --save-dev`
+`npm install cypress --save-dev`[Tillbaka](#back-5)
 
 ![CypressInstall](images/CypressInstallation.png)
