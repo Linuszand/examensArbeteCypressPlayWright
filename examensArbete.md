@@ -346,9 +346,9 @@ playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev
 
 **Playwrights tester** 
 
-[^1]: 
+[^1]: Observera att varje test har en tid
 
-![HastighetPlaywright](images/playwrighthastighet.png)
+ ![HastighetPlaywright](images/playwrighthastighet.png)
 
 **Cypress tester**
 
