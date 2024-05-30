@@ -349,7 +349,7 @@ playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev
 
 <a name="bilaga-1"></a>
 
-Observera att varje test har en tid.[Tillbaka](#back-1)
+Observera att varje test har en tid. [Tillbaka [1]](#back-1)
 
  ![HastighetPlaywright](images/playwrighthastighet.png)
 
@@ -357,7 +357,7 @@ Observera att varje test har en tid.[Tillbaka](#back-1)
 
 <a name="bilaga-2"></a>
 
-Observera att det bara finns en total tid för alla test.[Tillbaka](#back-2)
+Observera att det bara finns en total tid för alla test. [Tillbaka [2]](#back-2)
 
 ![HastighetCypress](images/cypresshastighet.png)
 
@@ -365,7 +365,7 @@ Observera att det bara finns en total tid för alla test.[Tillbaka](#back-2)
 
 <a name="bilaga-3"></a>
 
-`npm init playwright@latest`[Tillbaka](#back-3)
+`npm init playwright@latest` [Tillbaka [3]](#back-3)
 
 ![PlaywrightInstall](images/playwrightInstallation.png)
 
@@ -373,12 +373,12 @@ Observera att det bara finns en total tid för alla test.[Tillbaka](#back-2)
 
 <a name="bilaga-4"></a>
 
-`npm init`[Tillbaka](#back-4)
+`npm init` [Tillbaka [4]](#back-4)
 
 ![NpmInit](images/npminit.png)
 
 <a name="bilaga-5"></a>
 
-`npm install cypress --save-dev`[Tillbaka](#back-5)
+`npm install cypress --save-dev` [Tillbaka [5]](#back-5)
 
 ![CypressInstall](images/CypressInstallation.png)
