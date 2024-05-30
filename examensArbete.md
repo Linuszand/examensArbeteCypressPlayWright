@@ -395,7 +395,7 @@ playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev
 
 <a name="bilaga-7"></a>
 
-`Playwrights symbol för selektorn är tre cirklar` [Tillbaka [7]](#back-7)
+`Playwrights symbol för selektorn är tre cirklar/måltavla` [Tillbaka [7]](#back-7)
 
 ![Playwrightlocator](images/playwrightlocator.png)
 
@@ -403,6 +403,6 @@ playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev
 
 <a name="bilaga-8"></a>
 
-`Cypress symbol för selektorn är ett sikte` [Tillbaka [7]](#back-8)
+`Cypress symbol för selektorn är ett sikte` [Tillbaka [8]](#back-8)
 
 ![Playwrightlocator](images/cypresslocator.png)
