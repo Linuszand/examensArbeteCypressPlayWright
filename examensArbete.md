@@ -211,7 +211,7 @@ Både Playwright och Cypress har en "selector" knapp som underlättar för anvä
 
 Playwright stödjer Chromium, Firefox, WebKit, Google Chrome och Microsoft Edge, medan Cypress stödjer Chromium, Firefox, Google Chrome, Microsoft Edge och Electron. Det faktum att Playwright har ett mer omfattande stöd för WebKit är en fördel för dem som vill testa webbläsare för mobila enheter.
 
-Playwright har också stöd för parallell körning av alla tester med varje webbläsare som de stödjer. 
+Playwright kan också parallellt köra test för varje webbläsare som det har stöd för.[[6]](#bilaga-6) <a name="back-6"></a>
 
 ## 3.5 Installation
 
@@ -382,3 +382,9 @@ Observera att det bara finns en total tid för alla test. [Tillbaka [2]](#back-2
 `npm install cypress --save-dev` [Tillbaka [5]](#back-5)
 
 ![CypressInstall](images/CypressInstallation.png)
+
+<a name="bilaga-6"></a>
+
+Parallell körning av de webbläsare Playwright stödjer. [Tillbaka [6]](#back-6)
+
+![PlaywrightParallell](images/webbrowserparalell.png)
