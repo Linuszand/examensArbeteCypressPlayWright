@@ -184,7 +184,7 @@ Under alla figurer måste anges figurnummer och figurtext. Figurer i kapitel X n
 
 ## 3.1 Hastighet
 
-Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur snabbt alla tester genomförs. När testerna genomförs med Cypress exekveras testerna en efter en. I Playwright finns det en tid som går att observeras för varje test.[^1] I Cypress finns en total tid för alla tester, men inte för varje enskilt test.
+Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur snabbt alla tester genomförs. När testerna genomförs med Cypress exekveras testerna en efter en. I Playwright finns det en tid som går att observeras för varje test.[[1]](#bilaga-1) I Cypress finns en total tid för alla tester, men inte för varje enskilt test.
 
 ## 3.2 Användarvänlighet och grafiskt gränssnitt
 
@@ -346,7 +346,7 @@ playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev
 
 **Playwrights tester** 
 
-[^1]: Observera att varje test har en tid
+<a name="bilaga-1"></a>Observera att varje test har en tid
 
  ![HastighetPlaywright](images/playwrighthastighet.png)
 
