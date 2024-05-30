@@ -61,8 +61,16 @@ Beskriv vad ni ska göra i projektet och varför ni gör projektet. Som läsare 
 
 ## 1.2 Syfte
 
+Syftet med arbetet är att jämföra de två olika testverktygen Cypress och Playwright för att få en överblick över deras styrkor och svagheter med fokus på följande områden:
+
+- Grafiskt gränssnitt
+- Användarvänlighet
+- Installation
+- Syntax
+
+Om det finns tid kommer även ytterligare aspekter att tas upp.
 <!-- Varför gör ni undersökningen och vad vill ni att undersökningen skall leda till. Själva syftet ska formuleras i en mening: ”Syftet med arbetet/uppsatsen är att......” -->
-Syftet med arbetet är att jämföra de två olika testverktygen Cypress och Playwright för att få en överblick över deras styrkor och svagheter med fokus på det grafiska gränssnittet, användarvänlighet, installation, syntax och andra relevanta aspekter om tid finns.
+
 
 ## 1.3 Problemformulering
 
@@ -90,7 +98,15 @@ Hur olik är syntaxen i Playwright jämfört med Cypress?
 
 ## 1.5 Metod/Arbetssätt
 
-Jag har för avsikt att avgöra vilket testverktyg mellan Playwright och Cypress som är bäst genom att testa dem på ett spel. Testerna utgår ifrån dokumentation som har skrivits för de två olika testverktygen. Det grafiska gränssnittet och testverktygens användervänligt kommer att baseras på observationer vid exekvering av tester.
+Jag har för avsikt att avgöra vilket testverktyg mellan Playwright och Cypress som är mest effektivt inom de olika områdena som jag har beskrivit under Syfte. Jag kommer att testa ett spel som jag har skapat med båda testverktygen för att få en klarare bild av hur bra de olika verktygen presterar inom respektive område. Analysen av det grafiska gränssnittet och användarvänligheten kommer att baseras på:
+
+- Start av testverktygen
+- Hastighet vid exekvering
+- Visuella intryck
+
+Installationen av testverktygen kommer att bedömas utifrån deras dokumentation samt egna observationer. Syntaxen kommer att analyseras baserat på egna observationer när jag skriver testerna, samt genom referenser från dokumentationen.
+
+
 
 <!-- Hur ska arbetet/undersökningen genomföras? Alla undersökningar genomförs med kända och väl verifierade metoder. Dessa lämpar sig för olika typer av syften. Det är viktigt att metoden överensstämmer med syftet, liksom att ni väljer rätt verktyg för undersökningen av problemet.
 
@@ -168,7 +184,7 @@ Under alla figurer måste anges figurnummer och figurtext. Figurer i kapitel X n
 
 ## 3.1 Hastighet
 
-Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur snabbt alla tester genomförs. När testerna genomförs med Cypress exekveras testerna en efter en. I Playwright finns det en tid som går att observeras för varje test. I Cypress finns en total tid för alla tester, men inte för varje enskilt test.
+Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur snabbt alla tester genomförs. När testerna genomförs med Cypress exekveras testerna en efter en. I Playwright finns det en tid som går att observeras för varje test.[^1] I Cypress finns en total tid för alla tester, men inte för varje enskilt test.
 
 ## 3.2 Användarvänlighet och grafiskt gränssnitt
 
@@ -188,13 +204,13 @@ Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur 
 Ovan ser ni att Playwright har en kortare process för att starta testerna i det grafiska gränssnittet. Det som Cypress vinner på är kommandot/skriptet, vilket är aningen kortare. Det är dock ingen större vinst, eftersom namnet på skriptet manuellt kan ändras i package.json filen.
 Playwright har också allt samlat på ett ställe och det gör att interaktionen mellan användaren och verktyget effektiviseras. I Cypress behöver användaren gå fram och tillbaka om hen vill ändra vilken webbläsare som ska testas.
 
-## 3.3 Webbläsare
+Både Playwright och Cypress har en "selector" knapp som underlättar för användaren när hen skriver tester.
+
+**Webbläsare**
 
 Playwright stödjer Chromium, Firefox, WebKit, Google Chrome och Microsoft Edge, medan Cypress stödjer Chromium, Firefox, Google Chrome, Microsoft Edge och Electron. Det faktum att Playwright har ett mer omfattande stöd för WebKit är en fördel för dem som vill testa webbläsare för mobila enheter.
 
-## 3.4 Syntax
-
-Både Cypress och Playwright använder sig av asynkrona tester. Det innebär att koden kan köras oberoende av varandra. De huvudsakliga skillnaderna mellan Playwright och Cypress är att Playwright använder sig av `async` och `await` syntax för att hantera de asynkrona processerna t.ex. `await page.getByRole('button', { name: 'up' }).click()` och att varje test funktion använder sig av ett argument "page": `test('example test', async ({ page })`. Cypress använder sig mycket av kod som "kedjas" ihop t.ex. `cy.get("selector").should('be.visible')`. Cypress behöver inte använda några argument som "page" i testkoden, men det är ett alternativ: `it('example test', (frivilliga argument här)`.
+Playwright har också stöd för parallell körning av alla tester med varje webbläsare som de stödjer. 
 
 ## 3.5 Installation
 
@@ -212,6 +228,41 @@ Playwright och Cypress har tydlig information om hur installationen av testverkt
 
 Playwright har en kortare process för installationen eftersom det bara behövs ett kommando.
 
+## 3.4 Syntax
+
+Både Cypress och Playwright använder sig av asynkrona tester. Det innebär att testkoden kan köras utan att vänta på att tidigare operationer ska slutföras, vilket möjliggör att flera operationer kan köras parallellt eller vid olika tidpunkter.
+
+**Playwright**
+
+**Async/Await Syntax:** Playwright använder modern JavaScript-syntax med async och await för att hantera asynkrona operationer. Detta gör koden mer linjär och lättläst, särskilt för utvecklare som är bekanta med modern JavaScript.
+
+**Kodexempel:**
+```
+await page.getByRole('button', { name: 'up' }).click()
+```
+
+**Argumentet "page":** Varje testfunktion i Playwright använder ett argument som ofta heter "page". Detta argument representerar en webbläsarsida och används för att interagera med sidan när man skriver testerna.
+
+**Kodexempel:**
+```
+test('example test', async ({ page }) => { ... })
+```
+
+**Cypress**
+
+**"Kedjad" Syntax:** Cypress använder sig mycket av "kedje" syntax för att hantera asynkrona operationer. Detta innebär att flera kommandon kan "kedjas" ihop, annars hanterar Cypress väntetider och synkronisering automatiskt till skillnad från Playwright som använder `await` och `async`.
+
+**Kodexempel:**
+```
+cy.get("selector").should('be.visible')
+```
+
+**Inga Argument Krävs:** I Cypress behöver man inte använda argument som "page" i testkoden, men det finns möjlighet att använda frivilliga argument om det behövs.
+
+**Kodexempel:**
+```
+it('example test', () => { ... })
+```
 
 <!-- Här redovisar ni objektivt och utan värderingar era iakttagelser på ett strukturerat sätt vad ni kommit fram till i er undersökning/arbete. Hur blev det? Vad blev resultatet?
 
@@ -283,6 +334,8 @@ cuketest.com - Dokumentation om vilka webbläsare som stödjs av Playwright. htt
 docs.cypress.io - Dokumentation om vilka webbläsare som stöjds av Cypress. https://docs.cypress.io/guides/guides/launching-browsers#Browser-versions-supported [2024-03-24]
 
 playwright.dev - Dokumentation om installation av Playwright. https://playwright.dev/docs/intro#installing-playwright
+playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev/docs/writing-tests#first-test
+
 
 
 # Bilagor
@@ -293,15 +346,15 @@ playwright.dev - Dokumentation om installation av Playwright. https://playwright
 
 **Playwrights tester** 
 
-Observera att varje test har en tid.
+[^1]: 
 
-![Alt text](images/playwrighthastighet.png)
+![HastighetPlaywright](images/playwrighthastighet.png)
 
 **Cypress tester**
 
 Observera att det bara finns en total tid för alla test.
 
-![Alt text](images/cypresshastighet.png)
+![HastighetCypress](images/cypresshastighet.png)
 
 **Playwright Installation**
 
