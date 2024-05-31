@@ -451,7 +451,7 @@ Internet
 
 `Playwrights show-report UI` [Tillbaka [9]](#back-9)
 
-![PlaywrightShowReport](images/PlaywrightShowReport.png.png)
+![PlaywrightShowReport](images/PlaywrightShowReport.png)
 
 <a name="bilaga-10"></a>
 
