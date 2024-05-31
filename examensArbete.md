@@ -209,13 +209,50 @@ Playwright har också allt samlat på ett ställe och det gör att interaktionen
 <a name="back-8"></a>
 Både Playwright och Cypress har en "selector" knapp som underlättar för användaren när hen skriver tester.[[7]](#bilaga-7)[[8]](#bilaga-8)
 
+**Testrapporter**
+
+Playwright har inbyggt stöd för testrapporter som visas i en webbläsare. Kommandot för att visa rapporterna efter ett/flera test/tester har exekverats är `npx playwright show-report`. Testrapporten visar vilka test som passerar och vilka som misslyckas, och det går dessutom att trycka på de misslyckade testen för att se exakt vad de misslyckades med. Cypress har inte ett inbyggt stöd för html-testrapporter, och är därför svårare för nya användare att fixa, eftersom användaren behöver ladda ner en npm package: `npm install --save-dev cypress-mochawesome-reporter` och `cypress.config.js` måste konfigureras. Det som är likt mellan Playwright och Cypress när det gäller testrapport är kommandona `npx playwright test` och `npx cypress run`. Det är kommandon för enklare testrapporter som visas i terminalen.
+
+Steg för Playwright's "show-report":
+1. Skriv `npx playwright test` i terminalen.
+2. Skriv `npx playwright show-report`i terminalen.[[9]](#bilaga-9)<a name="back-9"></a>
+3. En webbläsare bör dyka upp med testrapporterna.
+
+Steg för Cypress's "show-report":
+1. Installera cypress-mochawesome-reporter genom att skriva `npm install --save-dev cypress-mochawesome-reporter` i terminalen.
+2. Konfigurera cypress.config.js filen med följande kod: 
+
+```javascript
+const { defineConfig } = require('cypress');
+
+module.exports = defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
+    },
+    reporter: 'cypress-mochawesome-reporter',
+    reporterOptions: {
+      reportDir: 'cypress/reports',
+      overwrite: false,
+      html: true,
+      json: false,
+      charts: true
+    },
+  },
+});
+```
+3. Skriv `npx cypress run` i terminalen.[[10]](#bilaga-10)<a name="back-10"></a>
+4. Den bör skapa en html fil i `cypress/reports` som går att öppna med live server.
+5. En webbläsare öppnas upp med testrapportena, likt Playwrights show-report.
+
 **Webbläsare**
 
 Playwright stödjer Chromium, Firefox, WebKit, Google Chrome och Microsoft Edge, medan Cypress stödjer Chromium, Firefox, Google Chrome, Microsoft Edge och Electron. Det faktum att Playwright har ett mer omfattande stöd för WebKit är en fördel för dem som vill testa webbläsare för mobila enheter.
 
-Playwright kan också parallellt köra test för varje webbläsare som det har stöd för.[[6]](#bilaga-6) <a name="back-6"></a>
+Playwright kan också parallellt köra test för varje webbläsare som de har stöd för.[[6]](#bilaga-6) <a name="back-6"></a>
 
 ## 3.5 Installation
+Notera att installationen av Playwright och Cypress kräver att du har installerat ®Node.js: `Node.js® is a free, open-source, cross-platform JavaScript runtime environment`.
 
 Playwright och Cypress har tydlig information om hur installationen av testverktyget går till:
 
@@ -334,12 +371,15 @@ Rhodin, M. (2018). Projekt Islandshäst. Rörelseforskning på häst och ryttare
 
 Internet
 
-cuketest.com - Dokumentation om vilka webbläsare som stödjs av Playwright. https://www.cuketest.com/playwright/docs/browsers/ 
+<font color="gold">cuketest.com - </font> Dokumentation om vilka webbläsare som stödjs av Playwright. https://www.cuketest.com/playwright/docs/browsers/ 
 
-docs.cypress.io - Dokumentation om vilka webbläsare som stöjds av Cypress. https://docs.cypress.io/guides/guides/launching-browsers#Browser-versions-supported [2024-03-24]
+<font color="gold">docs.cypress.io - </font> Dokumentation om vilka webbläsare som stöjds av Cypress. https://docs.cypress.io/guides/guides/launching-browsers#Browser-versions-supported [2024-03-24]
 
-playwright.dev - Dokumentation om installation av Playwright. https://playwright.dev/docs/intro#installing-playwright
-playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev/docs/writing-tests#first-test
+<font color="gold">playwright.dev - </font> Dokumentation om installation av Playwright. https://playwright.dev/docs/intro#installing-playwright
+
+<font color="gold">playwright.dev - </font> Dokumentation om hur man skriver tester. https://playwright.dev/docs/writing-tests#first-test
+
+<font color="gold">nodejs.org - </font>Behövs för att kunna köra Playwright och Cypress och mycket mer. https://nodejs.org/en/
 
 # Bilagor
 
@@ -405,4 +445,16 @@ playwright.dev - Dokumentation om hur man skriver tester. https://playwright.dev
 
 `Cypress symbol för selektorn är ett sikte` [Tillbaka [8]](#back-8)
 
-![Playwrightlocator](images/cypresslocator.png)
+![Cypresslocator](images/cypresslocator.png)
+
+<a name="bilaga-9"></a>
+
+`Playwrights show-report UI` [Tillbaka [9]](#back-9)
+
+![PlaywrightShowReport](images/PlaywrightShowReport.png.png)
+
+<a name="bilaga-10"></a>
+
+`Cypress show-report UI` [Tillbaka [10]](#back-10)
+
+![CypressShowReport](images/mochawesomereport.png)
