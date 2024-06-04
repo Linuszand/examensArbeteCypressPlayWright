@@ -8,6 +8,37 @@
 | Handledare/examinator | Ange vem som handlett/examinerat examensarbetet                 |
 | Datum                 | Ange datum för inlämning                                        |
 
+# Innehållsförteckning
+- [Titel](#titel)
+- [Innehållsförteckning](#innehållsförteckning)
+- [Sammanfattning](#sammanfattning)
+    - [Förkortningar](#förkortningar)
+- [Inledning 1](#inledning-1)
+  - [Bakgrund 1.1](#bakgrund-11)
+  - [Syfte 1.2](#syfte-12)
+  - [Problemformulering 1.3](#problemformulering-13)
+  - [Avgränsningar och fokus 1.4](#avgränsningar-och-fokus-14)
+  - [Metod/Arbetssätt 1.5](#metodarbetssätt-15)
+- [Teori 2](#teori-2)
+  - [Hastighet 2.1](#hastighet-21)
+  - [Användarvänlighet och grafiskt gränssnitt 2.2](#användarvänlighet-och-grafiskt-gränssnitt-22)
+    - [Testrapporter (show-report) 2.2.1](#testrapporter-show-report-221)
+    - [Webbläsare 2.2.2](#webbläsare-222)
+  - [Installation 3.3](#installation-33)
+  - [Referenslista 3.4](#referenslista-34)
+- [Resultat 3](#resultat-3)
+  - [Hastighet 3.1](#hastighet-31)
+  - [Användarvänlighet och grafiskt gränssnitt 3.2](#användarvänlighet-och-grafiskt-gränssnitt-32)
+    - [Testrapporter 3.2.1](#testrapporter-321)
+    - [Webbläsare 3.2.2](#webbläsare-322)
+  - [Installation 3.3](#installation-33-1)
+  - [Syntax 3.4](#syntax-34)
+- [Diskussion 4](#diskussion-4)
+- [Slutsatser 5](#slutsatser-5)
+  - [Rekommendationer 5.1](#rekommendationer-51)
+- [Referenslista 6](#referenslista-6)
+- [Bilagor 7](#bilagor-7)
+
 # Sammanfattning
 
 Examensarbetet syftar till att jämföra de två testverktygen Cypress och Playwright för att utvärdera deras styrkor och svagheter inom olika områden, inklusive grafiskt gränssnitt, användarvänlighet, installation och syntax. Studien genomfördes genom praktisk testning av ett egenutvecklat spel med båda verktygen. Resultaten visar att Playwright erbjuder parallell körning och bättre testrapporter, medan Cypress har en enklare installationsprocess men kräver mer manuell konfiguration för avancerade funktioner. Syftet är att ge läsaren en tydligare överblick över vilket verktyg som passar bäst för deras specifika behov.
@@ -31,7 +62,7 @@ Denna rubrik kan tas bort om det inte finns begrepp och förkortningar som behö
 | JSON    | JavaScript Object Notation  | Ett kompakt, textbaserat format som används för att utbyta data. Formatet är utformat för att enkelt fungera med Javascript|
 | HTML    | HyperText Markup Language   | Ett märkspråk som utgör strukturen för alla internets webbsidor|
 
-# 1. Inledning
+# Inledning 1
 
 <!-- Här börjar rapportens huvuddel. Huvuddelen skall delas in i numrerade kapitel och, i förekommande fall, i numrerade underavsnitt med beskrivande underrubriker. Hur indelningen med kapitelrubriker och underrubriker ska göras styrs i hög grad av det ämne som rapporten behandlar. Här visas enbart ett exempel. Ni får god hjälp hur ni skall bygga upp och skriva rapporten genom att studera litteratur om rapportskrivning, samt den instruktion som ges på kursen. Disposition och utformning av rapporter inom teknikområdet följer ofta speciella traditioner.
 
@@ -46,7 +77,7 @@ I examensarbetets inledning ska ni ge en kortfattad inledning till varför ni ju
 
 Examensarbetet kom som en idé från min lärare, men idén om att jämföra Cypress med Playwright kom från en som jobbade på Zignsec, företaget där LIAN utfördes. Playwright är ett modernare testverktyg än Cypress och är mer aktuellt att jämföra än andra testverktyg. Jag tyckte att det var intressant att skapa ett litet spel, som användes för att jämföra de olika testverktygen. 
 
-## 1.1 Bakgrund
+## Bakgrund 1.1
 
 **Vad är Cypress?**
 
@@ -64,7 +95,7 @@ Projektet är tänkt att få läsaren att förstå mer om de både testverktygen
 
 Beskriv vad ni ska göra i projektet och varför ni gör projektet. Som läsare vill jag förstå varför en fördjupning inom det här området har ett värde för yrkeskåren, er eller er kompetens när ni ska ut i arbetslivet. -->
 
-## 1.2 Syfte
+## Syfte 1.2
 
 Syftet med arbetet är att jämföra de två olika testverktygen Cypress och Playwright för att få en överblick över deras styrkor och svagheter med fokus på följande områden:
 
@@ -79,7 +110,7 @@ Idén är att få en överblick av testverktygens stykor och svagheter och sen f
 <!-- Varför gör ni undersökningen och vad vill ni att undersökningen skall leda till. Själva syftet ska formuleras i en mening: ”Syftet med arbetet/uppsatsen är att......” -->
 
 
-## 1.3 Problemformulering
+## Problemformulering 1.3
 
 <!-- Här beskriver ni vilket problem ni står inför. Försök att besvara frågan:
 
@@ -98,7 +129,7 @@ Hur lätt är det att installera Playwright jämfört med Cypress?
 Hur olik är syntaxen i Playwright jämfört med Cypress?
 
 
-## 1.4 Avgränsningar och fokus
+## Avgränsningar och fokus 1.4
 
 Detta kommer inte finnas med:
 
@@ -108,7 +139,7 @@ Detta kommer inte finnas med:
 <!-- Här gör ni ett förtydligande av vad ni avser att INTE studera i ert arbete. Detta görs för att det inte ska finnas förväntningar från opponent/läsare att det finns med. Att välja fokus är att avgränsa sig på ett mjukare sätt. Att välja fokus innebär att studenten motiverar varför vissa inriktningar väljs eller väljs bort. -->
 
 
-## 1.5 Metod/Arbetssätt
+## Metod/Arbetssätt 1.5
 
 Jag har för avsikt att avgöra vilket testverktyg mellan Playwright och Cypress som är mest effektivt inom de olika områdena som jag har beskrivit under Syfte. Jag kommer att testa ett spel som jag har skapat med båda testverktygen för att få en klarare bild av hur bra de olika verktygen presterar inom respektive område. Analysen av det grafiska gränssnittet och användarvänligheten kommer att baseras på:
 
@@ -158,9 +189,9 @@ Beskriv systematiskt och tydligt vad och hur ni gjort. Inkludera all information
 
 Det vara en fördel att beskriva ordningen på de olika momenten eller beskriva de olika arbetssätten ni valt. Ibland kan det vara en fördel att använda bilder och figurer för att förklara på ett bra sätt. -->
 
-# 2. Teori
+# Teori 2
 
-## 2.1 Hastighet
+## Hastighet 2.1
 
 Enligt Pathak (2024) stöds inte parallell körning av tester med Cypress. För att köra tester parallelt med Cypress, så behöver användaren dela upp testerna över flera filer. Pathak skriver att Playwright stödjer parallellisering av tester, även när de körs lokalt. Tester går att köra parallellt i en testfil. Tej (2023) skriver också att det är en fördel för Playwright att det går att köra tester parallellt. Backer skriver en viktig sak som glömdes ta upp i resultatet, jag citerar: 
 
@@ -189,11 +220,11 @@ Som ni ser ändras "workers" till fyra istället.
 
 ![PlaywrightWorkers](images/playwrightworkers.png)
 
-## 2.2 Användarvänlighet och grafiskt gränssnitt
+## Användarvänlighet och grafiskt gränssnitt 2.2
 
-### 2.2.1 Testrapporter (show-report)
+### Testrapporter (show-report) 2.2.1
 
-Enligt Backer (2024) har Playwright inbyggt stöd för några testrapporterare och har förmågan att konfigurera rapporterarna, författaren för Playwright Reporting (2023) skriver, jag citerar:
+Enligt Backer (2024) har Playwright inbyggt stöd för några testrapporterare och har förmågan att konfigurera rapporterarna och författaren för Playwright Reporting (2023) skriver, jag citerar:
 > Playwright reporting gives a built-in option for reporters. You can generate it by passing the reporter in the command line or specifying it in the Playwright configuration file.
 >
 > Before we get into actual test reporters, let's quickly set up the Playwright framework and run the example tests to see tests in action, and further, you will use it to create working example code.
@@ -210,13 +241,74 @@ Enligt Backer (2024) har Playwright inbyggt stöd för några testrapporterare o
 
 Enligt Backer (2024 ) har Cypress en standard "spec reporter" som går att konfigurera med andra rapporterare som Cypress stödjer. Backer skriver att Cypress är byggt utifrån Mocha, så alla rapporterare som är gjorda för Mocha kan användas av Cypress.  
 
-### 2.2.2 Webbläsare
+Bhat och Hegdeg (2022) har gjort en steg för steg guide för installation av `cypress-mochawesome-reporter`:
+
+>Step 1: Install  Cypress reporter, using Terminal install cypress-mochawesome-reporter, with command
+>
+>`npm i --save-dev cypress-mochawesome-reporter`
+>Step 2: Configure Cypress Reporter
+>
+>Navigate to your cypress configuration file, typically the name will `cypress.config.js`
+>
+>Add the below line of code
+>
+>//cypress.config.js
+>```javascript
+>const { defineConfig } = require("cypress");
+>
+>
+>module.exports = defineConfig({
+>
+> reporter: 'cypress-mochawesome-reporter',
+>
+>  e2e: {
+>
+>    setupNodeEvents(on, config) {
+>
+>     require('cypress-mochawesome-reporter/plugin')(on);
+>
+>    },
+>
+>  },
+>
+>});
+>```
+>The reporter is mentioned as the ‘cypress-mochawesome-reporter’, which you installed in step 1.
+>
+>Cypress 10 and above version has a separate part for e2e tests, inside that you need to add the 
+>required statement as shown above.
+>
+>Step 3: Configure Support e2e.js
+>
+>Navigate to cypress/support/e2e.js, and add the import statement using the command below.
+>
+>import `'cypress-mochawesome-reporter/register';`
+>
+>The above Steps complete the basic HTML reporter setup
+>
+>Step 4: Execute your tests
+>
+>Execute your tests with the below command
+>
+>`npx cypress run --e2e`
+>
+>Alternatively, you can also execute using npm run test, if you have configured scripts in package.json
+>
+>Step 5: View HTML reports
+>
+>Once the execution is complete, Cypress Generates the HTML report. Navigate to the folder with the 
+>name “reports”, you will find the HTML report as seen below
+>
+
+Bhat och Hegdegs version av installationen av `cypress-mochawesome-reporter` var lite olik från resultatet, men huvudsaken är att Cypress HTML-reporter inte är inbyggd, vilket kan vara en huvudvärk för nya användare.
+
+### Webbläsare 2.2.2
 
 Enligt GH (2023) stödjer Playwright Chrome familjens webbläsare (Chrome, Edge), Webkit (Safari), och Firefox. Solderea (2023) skriver också att det är dem webbläsarna som Playwright stödjer.
 
 Enligt Tej (2023) stödjer Cypress Chrome, Firefox, och Edge. Solderea (2023) skriver att Google Chrome, FireFox, Edge, Electron och WebKit stödjs (Med hjälp av Playwright). Tej nämner också en av Cypress nackdelar när det gäller exekvering av test: "Inability to instantiate multiple browsers simultaneously."
 
-## 3.3 Installation
+## Installation 3.3
 
 Enligt Solderea (2023) är det här stegen för installation av Playwright respektive Cypress:
 
@@ -240,7 +332,7 @@ Enligt Solderea (2023) är det här stegen för installation av Playwright respe
 
 Installationen av Cypress och Playwright stämmer överens med mina observationer. Vilken som är bäst, bestämmer användaren.
 
-## Referenslista
+## Referenslista 3.4
 
 Pathak, K. (2024) Cypress vs Playwright: A Comparative Analysis, hämtad från https://testgrid.io/blog/cypress-vs-playwright/
 
@@ -289,9 +381,9 @@ Tabeller & Figurer
 
 Under alla figurer måste anges figurnummer och figurtext. Figurer i kapitel X numreras löpande, Figur X.1, Figur X.2 etc. I löpande text refererar man till figurerna genom att skriva exempelvis ’Experimentuppställningen visas i Figur 3.2’. Tabeller numreras löpande liksom figurerna, Tabell X.1, Tabell X.2 med tabelltexten ovanför tabellen. -->
 
-# 3. Resultat
+# Resultat 3
 
-## 3.1 Hastighet
+## Hastighet 3.1
 <a name="back-1"></a>
 <a name="back-2"></a>
 Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur snabbt alla tester genomförs. När testerna genomförs med Cypress exekveras testerna en efter en. I Playwright finns det en tid som går att observeras för varje test.[[1]](#bilaga-1) I Cypress finns en total tid för alla tester, men inte för varje enskilt test.[[2]](#bilaga-2)
@@ -300,7 +392,7 @@ Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur 
 
 Playwrights parallellisering av testerna är fördelaktig för större projekt med mer komplexa/längre tester, medan Cypress sekventiella upplägg av testerna kan vara bättre för mindre projekt.
 
-## 3.2 Användarvänlighet och grafiskt gränssnitt
+## Användarvänlighet och grafiskt gränssnitt 3.2
 
 **Playwright**
 1. Skriv kommandot/skriptet: `npx playwright test --ui` i terminalen.
@@ -326,7 +418,7 @@ Playwrights kortare process underlättar för utvecklare som vill vara produktiv
 <a name="back-8"></a>
 Både Playwright och Cypress har en "selector" knapp som underlättar för användaren när hen skriver tester.[[7]](#bilaga-7)[[8]](#bilaga-8)
 
-### 3.2.1 Testrapporter 
+### Testrapporter 3.2.1
 
 Playwright har inbyggt stöd för testrapporter som visas visuellt i en webbläsare. Kommandot för att visa rapporterna efter ett/flera test/tester har exekverats är `npx playwright show-report`. Testrapporten visar vilka test som passerar och vilka som misslyckas, och det går dessutom att trycka på de misslyckade testen för att se exakt vad de misslyckades med. Cypress har inte ett inbyggt stöd för html-testrapporter. Cypress-användaren behöver ladda ner ett npm package: `npm install --save-dev cypress-mochawesome-reporter` och `cypress.config.js` måste konfigureras. Det som är likt med Playwright och Cypress när det gäller testrapport är kommandona `npx playwright test` och `npx cypress run`. Det är kommandon för enklare testrapporter som visas i terminalen.
 
@@ -373,7 +465,7 @@ module.exports = defineConfig({
 
 Playwright har inbyggt stöd för "show-report", vilket visar upp en HTML-baserad sida på testerna. Det är en fördel om användaren vill slippa konfigurera `config.js` filen eller installera ett nytt `npm package`.
 
-### 3.2.2 Webbläsare
+### Webbläsare 3.2.2
 
 Playwright stödjer Chromium, Firefox, WebKit, Google Chrome och Microsoft Edge[[L1]](#link-1), medan Cypress stödjer Chromium, Firefox, Google Chrome, Microsoft Edge och Electron[[L2]](#link-2), samt en mer experimentell version av WebKit. Det faktum att Playwright har ett mer omfattande stöd för WebKit är en fördel för dem som vill testa webbläsare för mobila enheter.
 
@@ -383,7 +475,7 @@ Playwright kan också parallellt köra test för varje webbläsare som de har st
 
 Playwright har en fördel när det gäller WebKit och parallell exekvering av testerna i olika webbläsare.
 
-## 3.3 Installation
+## Installation 3.3
 Notera att installationen av Playwright och Cypress kräver att du har installerat ®Node.js: `Node.js® is a free, open-source, cross-platform JavaScript runtime environment`.[[L5]](#link-5)
 
 Playwright och Cypress har tydlig information om hur installationen av testverktyget går till:
@@ -404,7 +496,7 @@ Playwright och Cypress har tydlig information om hur installationen av testverkt
 
 Playwright har en installationsprocess som mer "samlad". Det är en väldigt linjär och lättförståelig installation.
 
-## 3.4 Syntax
+## Syntax 3.4
 
 Både Cypress och Playwright använder sig av asynkrona tester. Det innebär att testkoden kan köras utan att vänta på att tidigare operationer ska slutföras, vilket möjliggör att flera operationer kan köras parallellt eller vid olika tidpunkter.
 
@@ -449,7 +541,7 @@ När ni redovisar ert resultat ska ni inte blanda in egna upplevelser, känslor 
 
 Har ni ställt frågor enligt ett frågeformulär är det lämpligt att redovisa svaren i en figur eller tabell. -->
 
-# 4. Diskussion
+# Diskussion 4
 
 <!-- Här formulerar ni svaren på era frågeställningar och kontrollerar och reflekterar över om rapporten uppfyller syftet.
 
@@ -459,17 +551,17 @@ Ni kan även diskutera noggrannheten/tillförlitligheten i arbetet och beskriva 
 
 Tänk på att inte låta den här texten bli full av undanflykter och ursäkter, utan snarare en saklig reflektion. -->
 
-# 5. Slutsatser
+# Slutsatser 5
 
 <!-- Utifrån den analys ni gjort i avsnittet ovan kan ni dra slutsatser utifrån syfte och frågeställningarna. Ett visst mått av subjektivitet är tillåtet men det måste vara motiverat av det som framkommit i uppsatsens analys.
 
 Ibland går det dock inte att dra några säkra slutsatser, det ligger i forskningens natur, vilket också är ett resultat. Man förklarar då varför det inte gick att dra säkra slutsatser. -->
 
-## 5.1 Rekommendationer
+## Rekommendationer 5.1
 
 <!-- Baserat på vad ni kommit fram till samt på undersökningens syfte, avger ni här er yrkesmässiga/professionella rekommendation till dem som kan dra nytta av undersökningens resultat. Här kan ni tänka fritt och diskutera ämnet ur ett mer subjektivt perspektiv. -->
 
-# 6. Referenslista
+# Referenslista 6
 
 <!-- De källor ni använt ska redovisas i en referenslista. Den ska vara på ett eget blad och sist i arbetet.
 
@@ -523,7 +615,7 @@ Internet
 <a name="link-7"></a>
 <font color="gold">github.com - </font> mochawesome-reporter-cypress dokumentation (README fil). https://github.com/LironEr/cypress-mochawesome-reporter/blob/master/README.md
 
-# Bilagor
+# Bilagor 7
 
 <!-- I bilagor samlas allt som inte är nödvändigt för att följa och förstå framställningen i huvuddelen, t.ex. intervjufrågor, materialdata, omfattande beräkningar och programkoder eller detaljerade metodbeskrivningar. Här kan man också placera figurer som är för stora för att infoga i den löpande texten. Bilagorna skall utformas så att de kan fungera som självständiga dokument, dvs man skall inte behöva läsa i huvuddelen för att kunna förstå innehållet i respektive bilaga. Bilagornas sidor numreras för sig.
 
