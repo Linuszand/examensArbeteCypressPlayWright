@@ -31,7 +31,6 @@ Denna rubrik kan tas bort om det inte finns begrepp och förkortningar som behö
 | JSON    | JavaScript Object Notation  | Ett kompakt, textbaserat format som används för att utbyta data. Formatet är utformat för att enkelt fungera med Javascript|
 | HTML    | HyperText Markup Language   | Ett märkspråk som utgör strukturen för alla internets webbsidor|
 
-
 # 1. Inledning
 
 <!-- Här börjar rapportens huvuddel. Huvuddelen skall delas in i numrerade kapitel och, i förekommande fall, i numrerade underavsnitt med beskrivande underrubriker. Hur indelningen med kapitelrubriker och underrubriker ska göras styrs i hög grad av det ämne som rapporten behandlar. Här visas enbart ett exempel. Ni får god hjälp hur ni skall bygga upp och skriva rapporten genom att studera litteratur om rapportskrivning, samt den instruktion som ges på kursen. Disposition och utformning av rapporter inom teknikområdet följer ofta speciella traditioner.
@@ -45,19 +44,21 @@ Observera att varje yrkeshögskoleanordnare eventuellt har egna formaliaregler o
 
 I examensarbetets inledning ska ni ge en kortfattad inledning till varför ni just valt detta område/ämne. Om ni skriver examensarbetet kopplat till LIA ska ni även beskriva er LIA-plats samt övergripande information om LIA-företaget. -->
 
-Examensarbetet kom som en idé från min lärare, men idén om att jämföra Cypress med Playwright kom från en som jobbade på Zignsec, företaget där LIAN utfördes. Playwright är ett modernare testverktyg än Cypress och är mer aktuellt att jämföra än andra testverktyg. Jag tyckte att var intressant att skapa ett litet spel, som användes för att jämföra de olika testverktygen. 
+Examensarbetet kom som en idé från min lärare, men idén om att jämföra Cypress med Playwright kom från en som jobbade på Zignsec, företaget där LIAN utfördes. Playwright är ett modernare testverktyg än Cypress och är mer aktuellt att jämföra än andra testverktyg. Jag tyckte att det var intressant att skapa ett litet spel, som användes för att jämföra de olika testverktygen. 
 
 ## 1.1 Bakgrund
 
-Under min tid på LIAn testade vi olika produkter mest med Cypress, men vi fick även tips om ett testverktyg som heter Playwright. Jag har därför valt att jämföra Cypress och Playwrights för- och nackdelar. Huvudsaken till varför jag valde Playwright är för det känns relevant att testa ett modernare testverktyg mot ett äldre.
+**Vad är Cypress?**
 
+Cypress är ett "open-source", front-end/API testverktyg, byggt på Node.js och är skapat av företaget Cypress.io. Brian Mann och Gleb Bahmutov är två viktiga personer som var med och utvecklade Cypress. Cypress använder Javascript när man skriver testerna, men mycket av testkoden kan skrivas med Cypress inbyggda kommandon. Cypress är tänkt att automatisera och utföra handlingar som att fylla i former, klicka på knappar, och navigera sidor. Cypress har en [dokumentation](https://docs.cypress.io/guides/overview/why-cypress) som går att besöka för att lära sig mer om testverktyget.
 
+**Vad är Playwright?**
 
-Cypress är ett front-end testverktyg som underlättar för programvarutestare att automatisera olika handlingar man gör när man besöker en sida. Handlingar i det här fallet är t.ex. att klicka på en knapp eller att kolla om en selektor existerar där den ska vara. Automatiseringen av dessa handlingar görs med hjälp av kod man skriver i Javascript. Det finns även ett skript man kan använda för att starta en UI över vad testkoden gör.
+Playwright är ett "open-source", front-end testverktyg och är skapat av Microsoft. Det skapades för att utvecklare ska kunna testautomatisera webbapplikationer. Playwright tillåter utvecklarna att utföra handlingar som att fylla i former, klicka på knappar, och navigera sidor. Programmeringspråk som stödjs av Playwright är: JavaScript, TypeScript, Python och Java. Det finns en [dokumentation](https://playwright.dev/docs/intro) som täcker det mesta av det som går att göra med Playwright.
 
+**Varför gör jag det här projektet?**
 
-
-Anledningen till att man automatiserar dessa handlingar är för att selektorerna på en sida kan uppdateras över tid. En annan anledning är att det är mycket mer effektivt och sparar tid från att behöva manuellt testa allting varje gång.
+Projektet är tänkt att få läsaren att förstå mer om de både testverktygen för att sedan göra en bedömning om vilken av testverktygen hen vill använda.
 
 <!-- Under rubriken bakgrund skall ni beskriva bakgrunden till arbetet. Det är orsakerna till och beskrivningen av problemet, eller företagets situation, som skall beskrivas.
 
@@ -69,11 +70,12 @@ Syftet med arbetet är att jämföra de två olika testverktygen Cypress och Pla
 
 - Grafiskt gränssnitt
 - Användarvänlighet
+- Hastighet
 - Testrapporter
 - Installation
 - Syntax
 
-Idén är att överblicken över testverktygens stykor och svagheter, får läsaren att själv bestämma sig för vilket av dem de tänker använda sig av.
+Idén är att få en överblick av testverktygens stykor och svagheter och sen får läsaren själv bestämma sig för vilket av dem de tänker använda sig av.
 <!-- Varför gör ni undersökningen och vad vill ni att undersökningen skall leda till. Själva syftet ska formuleras i en mening: ”Syftet med arbetet/uppsatsen är att......” -->
 
 
@@ -89,7 +91,7 @@ Hur bra grafiskt gränssnitt har Playwright jämfört med Cypress?
 
 Hur användarvänligt är Playwright jämfört med Cypress?
 
-Hur snabb är Playwright jämfört med Cypress, när det gäller exekvering av kod?
+Hur snabbt är Playwright jämfört med Cypress, när det gäller exekvering av kod?
 
 Hur lätt är det att installera Playwright jämfört med Cypress?
 
@@ -97,6 +99,11 @@ Hur olik är syntaxen i Playwright jämfört med Cypress?
 
 
 ## 1.4 Avgränsningar och fokus
+
+Detta kommer inte finnas med:
+
+- Jämförande av genomsnittlig hastighet i sekunder mellan de två testverktygen. Det finns ingen anledning till att jämföra det, eftersom Playwrights tester körs parallellt lokalt, och det gör inte Cypress.
+- En mer övergripande analys av testverktygens rapporterare. Det skulle ta för mycket tid att jämföra alla rapporterare, så jag håller mig till "npx playwright show-report" och en av Cypress motsvarande "cypress-mochawesome-reporter".
 
 <!-- Här gör ni ett förtydligande av vad ni avser att INTE studera i ert arbete. Detta görs för att det inte ska finnas förväntningar från opponent/läsare att det finns med. Att välja fokus är att avgränsa sig på ett mjukare sätt. Att välja fokus innebär att studenten motiverar varför vissa inriktningar väljs eller väljs bort. -->
 
@@ -153,6 +160,88 @@ Det vara en fördel att beskriva ordningen på de olika momenten eller beskriva 
 
 # 2. Teori
 
+## 2.1 Hastighet
+
+Enligt Pathak (2024) stöds inte parallell körning av tester med Cypress. För att köra tester parallelt med Cypress, så behöver användaren dela upp testerna över flera filer. Pathak skriver att Playwright stödjer parallellisering av tester, även när de körs lokalt. Tester går att köra parallellt i en testfil. Tej (2023) skriver också att det är en fördel för Playwright att det går att köra tester parallellt. Backer skriver en viktig sak som glömdes ta upp i resultatet, jag citerar: 
+
+**Playwright**
+
+> Playwright provides the ability to execute tests in parallel across multiple machines. The default setting is to run test cases in a single
+> worker, but it is possible to run tests in parallel on different machines by specifying the number of workers. This can be done through the 
+> command line by using the command “npx playwright test –workers 4,” where “4” represents the desired number of workers. Another option is to 
+> configure the workers in the playwright.config.js file.
+
+**Cypress**
+> Cypress has been specifically designed not to run tests in parallel on a single local machine. This restriction is detailed in the official 
+> Cypress documentation, with several reasons cited. However, if your project already has Continuous Integration in place, it is possible to set 
+> up parallel tests in CI by following the guidelines provided in the Cypress documentation. The framework’s approach to parallelization is based 
+> on file separation, so to take advantage of this feature, your tests need to be organized into separate files.
+
+I Backer's citat gällande Playwright, har han av misstag missat ett bindesträck i "npx playwright test –workers 4". Här är hur det ska stå:
+
+![4workers](images/w-%20Visual%20Studio%20Code.png)
+
+Som ni ser ändras "workers" till fyra istället.
+
+![4workers](images/4workers.png)
+
+ Backer har också skrivit att standard är att en "worker" används, men när standard skriptet "npx playwright test" skrivs in i terminalen, står det att det används åtta "workers".
+
+![PlaywrightWorkers](images/playwrightworkers.png)
+
+## 2.2 Användarvänlighet och grafiskt gränssnitt
+
+### 2.2.1 Testrapporter (show-report)
+
+Enligt Backer (2024) har Playwright inbyggt stöd för några testrapporterare och har förmågan att konfigurera rapporterarna, författaren för Playwright Reporting (2023) skriver, jag citerar:
+> Playwright reporting gives a built-in option for reporters. You can generate it by passing the reporter in the command line or specifying it in the Playwright configuration file.
+>
+> Before we get into actual test reporters, let's quickly set up the Playwright framework and run the example tests to see tests in action, and further, you will use it to create working example code.
+>
+> Following are the Playwright built-in reporters:
+>
+> - List Reporter
+> - Line Reporter
+> - Dot Reporter
+> - HTML Reporter
+> - JSON Reporter
+> - JUnit Reporter
+> - GitHub Actions annotations
+
+Enligt Backer (2024 ) har Cypress en standard "spec reporter" som går att konfigurera med andra rapporterare som Cypress stödjer. Backer skriver att Cypress är byggt utifrån Mocha, så alla rapporterare som är gjorda för Mocha kan användas av Cypress.  
+
+### 2.2.2 Webbläsare
+
+Enligt GH (2023) stödjer Playwright Chrome familjens webbläsare (Chrome, Edge), Webkit (Safari), och Firefox. Solderea (2023) skriver också att det är dem webbläsarna som Playwright stödjer.
+
+Enligt Tej (2023) stödjer Cypress Chrome, Firefox, och Edge. Solderea (2023) skriver att Google Chrome, FireFox, Edge, Electron och WebKit stödjs (Med hjälp av Playwright). Tej nämner också en av Cypress nackdelar när det gäller exekvering av test: "Inability to instantiate multiple browsers simultaneously."
+
+## 3.3 Installation
+
+Enligt Solderea (2023) är det här stegen för installation av Playwright respektive Cypress:
+
+**Playwright**
+
+> 1. Pre-requisites: NodeJS should already be installed.
+> 2. Setup Playwright using the command `npm init playwright@latest` and answer the below questions:
+>  - Do you want to use TypeScript or JavaScript?
+>  - Where to put your end-to-end tests?
+>  - Add a GitHub Actions workflow?
+>  - Install Playwright browsers?
+> 
+> Do not worry; all of the above sections can be answered with yes or no, as seen below.
+
+**Cypress**
+
+> 1. Pre-requisites: NodeJS should already be installed.
+> 2. Generate package.json using the command npm init.
+> 3. Install the latest version of Cypress using the command npm install cypress — save-dev.
+> 4. Once that is done, simply type `npx cypress open`. At the time of writing this blog, the latest version of Cypress was 12.7.1.
+
+Installationen av Cypress och Playwright stämmer överens med mina observationer. Vilken som är bäst, bestämmer användaren.
+
+## Referenslista
+
 Pathak, K. (2024) Cypress vs Playwright: A Comparative Analysis, hämtad från https://testgrid.io/blog/cypress-vs-playwright/
 
 Solderea, I (2023) Cypress vs Playwright: A Detailed Comparison, hämtad från https://www.lambdatest.com/blog/cypress-vs-playwright/
@@ -163,45 +252,9 @@ GH (okänt namn), (2023) Playwright Automation Framework: Tutorial, hämtad frå
 
 Backer, A (2024) Playwright vs. Cypress: Key Differences, hämtad från https://muuktest.com/blog/playwright-vs-cypress#playwright_vs._cypress:_a_comparison
 
-## 2.1 Hastighet
+Bhat, P & Hegdeg, G (2022) Understanding Cypress HTML Reporter, hämtad från https://www.browserstack.com/guide/cypress-html-reporter
 
-Enligt Pathak (2024) stöds inte parallell körning av tester med Cypress. För att köra tester parallelt med Cypress, så behöver användaren dela upp testerna över flera filer. Pathak skriver att Playwright stödjer parallellisering av tester, även när de körs lokalt. Tester går att köra parallellt i en testfil. Tej (2023) skriver också att det är en fördel för Playwright att det går att köra tester parallellt.
-
-## 2.2 Användarvänlighet och grafiskt gränssnitt
-
-**Testrapporter**
-
-Enligt Backer (2024) har Playwright inbyggt stöd för några testrapporterare och har förmågan att konfigurera rapporterarna, medan Cypress har en standard "spec reporter" som går att konfigurera med andra rapporterare som Cypress stödjer. Backer skriver att Cypress är byggt utifrån Mocha, så alla rapporterare som är gjorda för Mocha kan användas av Cypress.
-
-**Webbläsare**
-
-Enligt GH (2023) stödjer Playwright Chrome familjens webbläsare (Chrome, Edge), Webkit (Safari), och Firefox. Solderea (2023) skriver också att det är dem webbläsarna som Playwright stödjer.
-
-Enligt Tej (2023) stödjer Cypress Chrome, Firefox, och Edge. Solderea (2023) skriver att Google Chrome, FireFox, Edge, Electron och WebKit stödjs (Med hjälp av Playwright).
-
-## 3.3 Installation
-
-Enligt Solderea (2023) är det här stegen för installation av Playwright respektive Cypress:
-
-**Playwright**
-
-1. Pre-requisites: NodeJS should already be installed.
-2. Setup Playwright using the command `npm init playwright@latest` and answer the below questions:
- - Do you want to use TypeScript or JavaScript?
- - Where to put your end-to-end tests?
- - Add a GitHub Actions workflow?
- - Install Playwright browsers?
-
-Do not worry; all of the above sections can be answered with yes or no, as seen below.
-
-**Cypress**
-
-1. Pre-requisites: NodeJS should already be installed.
-2. Generate package.json using the command npm init.
-3. Install the latest version of Cypress using the command npm install cypress — save-dev.
-4. Once that is done, simply type `npx cypress open`. At the time of writing this blog, the latest version of Cypress was 12.7.1.
-
-Installationen av Cypress och Playwright stämmer överens med mina observationer. Vilken som är bäst, bestämmer användaren.
+Playwright Reporting, (2023) Playwright Reporting: A Complete Tutorial, hämtad från https://www.lambdatest.com/learning-hub/playwright-reporting
 
 <!-- Uppsatsen teori handlar om att ”beskriva det som redan är skrivet”. Utifrån syfte och problemformulering letar ni upp lämplig teori där ni kan fördjupa er i frågeställningarna. Teorin ska knytas till det undersökningsresultat du/ni kommit fram till. Detta ska bekräftas eller dementeras.
 
@@ -243,6 +296,10 @@ Under alla figurer måste anges figurnummer och figurtext. Figurer i kapitel X n
 <a name="back-2"></a>
 Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur snabbt alla tester genomförs. När testerna genomförs med Cypress exekveras testerna en efter en. I Playwright finns det en tid som går att observeras för varje test.[[1]](#bilaga-1) I Cypress finns en total tid för alla tester, men inte för varje enskilt test.[[2]](#bilaga-2)
 
+**Analys:**
+
+Playwrights parallellisering av testerna är fördelaktig för större projekt med mer komplexa/längre tester, medan Cypress sekventiella upplägg av testerna kan vara bättre för mindre projekt.
+
 ## 3.2 Användarvänlighet och grafiskt gränssnitt
 
 **Playwright**
@@ -261,13 +318,17 @@ Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur 
 Ovan ser ni att Playwright har en kortare process för att starta testerna i det grafiska gränssnittet. Det som Cypress vinner på är kommandot/skriptet, vilket är aningen kortare. Det är dock ingen större vinst, eftersom namnet på skriptet manuellt kan ändras i package.json filen.
 Playwright har också allt samlat på ett ställe och det gör att interaktionen mellan användaren och verktyget effektiviseras. I Cypress behöver användaren gå fram och tillbaka om hen vill ändra vilken webbläsare som ska testas.
 
+**Analys**
+
+Playwrights kortare process underlättar för utvecklare som vill vara produktiva och snabbt komma igång med testningen.
+
 <a name="back-7"></a>
 <a name="back-8"></a>
 Både Playwright och Cypress har en "selector" knapp som underlättar för användaren när hen skriver tester.[[7]](#bilaga-7)[[8]](#bilaga-8)
 
-**Testrapporter**
+### 3.2.1 Testrapporter 
 
-Playwright har inbyggt stöd för testrapporter som visas visuellt i en webbläsare. Kommandot för att visa rapporterna efter ett/flera test/tester har exekverats är `npx playwright show-report`. Testrapporten visar vilka test som passerar och vilka som misslyckas, och det går dessutom att trycka på de misslyckade testen för att se exakt vad de misslyckades med. Cypress har inte ett inbyggt stöd för html-testrapporter. Cypress användaren behöver ladda ner ett npm package: `npm install --save-dev cypress-mochawesome-reporter` och `cypress.config.js` måste konfigureras. Det som är likt mellan Playwright och Cypress när det gäller testrapport är kommandona `npx playwright test` och `npx cypress run`. Det är kommandon för enklare testrapporter som visas i terminalen.
+Playwright har inbyggt stöd för testrapporter som visas visuellt i en webbläsare. Kommandot för att visa rapporterna efter ett/flera test/tester har exekverats är `npx playwright show-report`. Testrapporten visar vilka test som passerar och vilka som misslyckas, och det går dessutom att trycka på de misslyckade testen för att se exakt vad de misslyckades med. Cypress har inte ett inbyggt stöd för html-testrapporter. Cypress-användaren behöver ladda ner ett npm package: `npm install --save-dev cypress-mochawesome-reporter` och `cypress.config.js` måste konfigureras. Det som är likt med Playwright och Cypress när det gäller testrapport är kommandona `npx playwright test` och `npx cypress run`. Det är kommandon för enklare testrapporter som visas i terminalen.
 
 Steg för Playwright's "show-report":
 1. Skriv `npx playwright test` i terminalen.
@@ -308,11 +369,19 @@ module.exports = defineConfig({
 4. Den bör skapa en html fil i `cypress/reports` som går att öppna med live server.
 5. En webbläsare öppnas upp med testrapportena, likt Playwrights show-report.
 
-**Webbläsare**
+**Analys**
+
+Playwright har inbyggt stöd för "show-report", vilket visar upp en HTML-baserad sida på testerna. Det är en fördel om användaren vill slippa konfigurera `config.js` filen eller installera ett nytt `npm package`.
+
+### 3.2.2 Webbläsare
 
 Playwright stödjer Chromium, Firefox, WebKit, Google Chrome och Microsoft Edge[[L1]](#link-1), medan Cypress stödjer Chromium, Firefox, Google Chrome, Microsoft Edge och Electron[[L2]](#link-2), samt en mer experimentell version av WebKit. Det faktum att Playwright har ett mer omfattande stöd för WebKit är en fördel för dem som vill testa webbläsare för mobila enheter.
 
 Playwright kan också parallellt köra test för varje webbläsare som de har stöd för.[[6]](#bilaga-6) <a name="back-6"></a>
+
+**Analys**
+
+Playwright har en fördel när det gäller WebKit och parallell exekvering av testerna i olika webbläsare.
 
 ## 3.3 Installation
 Notera att installationen av Playwright och Cypress kräver att du har installerat ®Node.js: `Node.js® is a free, open-source, cross-platform JavaScript runtime environment`.[[L5]](#link-5)
@@ -331,7 +400,9 @@ Playwright och Cypress har tydlig information om hur installationen av testverkt
 2. Gå igenom alla steg som dyker upp i terminalen.
 3. skriv `npm install cypress --save-dev` i terminalen.[[5]](#bilaga-5)
 
-Playwright har en kortare process för installationen eftersom det bara behövs ett kommando.
+**Analys**
+
+Playwright har en installationsprocess som mer "samlad". Det är en väldigt linjär och lättförståelig installation.
 
 ## 3.4 Syntax
 
@@ -369,6 +440,9 @@ cy.get("selector").should('be.visible')
 it('example test', () => { ... })
 ```
 
+**Analys**
+
+Playwright har en linjär och lättläst syntax, vilket gör att den är lätt att hitta fel i. Det kan vara lite svårare för nybörjare att sätta sig in i `await/async` och `page` tänket, medan Cypress har en nybörjarvänlig och lättförståelig syntax, vilket gör att det är lätt att förstå syntaxen och komma igång med testningen.
 <!-- Här redovisar ni objektivt och utan värderingar era iakttagelser på ett strukturerat sätt vad ni kommit fram till i er undersökning/arbete. Hur blev det? Vad blev resultatet?
 
 När ni redovisar ert resultat ska ni inte blanda in egna upplevelser, känslor eller någon analys. Ni ska enbart beskriva utfallet på er undersökning/arbete och enbart det som är centralt för resultatet. Så den här texten och/eller redovisning är saklig, formell och ”torr” och ni sparar era personliga reflektioner till texten under rubriken Diskussion. Mottagaren ska kunna se en röd tråd som löper från Bakgrund med syftet, avgränsningar och metodbeskrivning, och tydligt se hur detta leder fram till resultatet.
