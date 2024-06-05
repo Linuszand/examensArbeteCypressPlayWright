@@ -198,7 +198,7 @@ Det vara en fördel att beskriva ordningen på de olika momenten eller beskriva 
 
 ## Hastighet 2.1
 
-Enligt Pathak (2024) stöds inte parallell körning av tester med Cypress. För att köra tester parallelt med Cypress, behöver användaren dela upp testerna över flera filer. Pathak skriver att Playwright stödjer parallellisering av tester, även när de körs lokalt[L8](#link-8). Tester går att köra parallellt i en testfil. Tej (2023) skriver också att det är en fördel för Playwright att det går att köra tester parallellt[L9](#link-9). Backer skriver en viktig sak som glömdes ta upp i resultatet[L10](#link-10), jag citerar: 
+Enligt Pathak (2024) stöds inte parallell körning av tester med Cypress. För att köra tester parallelt med Cypress, behöver användaren dela upp testerna över flera filer. Pathak skriver att Playwright stödjer parallellisering av tester, även när de körs lokalt[[L8]](#link-8). Tester går att köra parallellt i en testfil. Tej (2023) skriver också att det är en fördel för Playwright att det går att köra tester parallellt[[L9]](#link-9). Backer skriver en viktig sak som glömdes ta upp i resultatet[[L10]](#link-10), jag citerar: 
 
 **Playwright**
 
@@ -231,18 +231,18 @@ Som ni ser ändras "workers" till fyra istället.
 
 **Playwright**
 
-Enligt Del Puppo[L11](#link-11) används kommandot `npx playwright run --ui` för att starta ett fönster med Playwright, "The result of this command is a new window in your display!". Del Puppo skriver, jag citerar: 
+Enligt Del Puppo[[L11]](#link-11) används kommandot `npx playwright run --ui` för att starta ett fönster med Playwright, "The result of this command is a new window in your display!". Del Puppo skriver, jag citerar: 
 >Using this view, you can run and debug your test. But let's dive into it.
 >The view is split into two parts: the left part contains the list of the tests, and the right part is the crucial view to check and debug the 
 >tests.
 
 **Cypress**
 
-Det finns inte lika många artiklar som beskriver Cypress grafiska gränssnitt för testsidan på ett detaljerat sätt som går att jämföra med resultatet. Resultaten är baserade på egna observationer i gränssnittet och dokumentation från Cypress.io[L16](#link-16)[L17](#link-17).
+Det finns inte lika många artiklar som beskriver Cypress grafiska gränssnitt för testsidan på ett detaljerat sätt som går att jämföra med resultatet. Resultaten är baserade på egna observationer i gränssnittet och dokumentation från Cypress.io[[L16]](#link-16)[[L17]](#link-17).
 
 ### Testrapporterare (show-report) 2.2.1
 
-Enligt Backer (2024) har Playwright inbyggt stöd för några testrapporterare och har förmågan att konfigurera rapporterarna[L10](#link-10) och författaren för Playwright Reporting (2023) skriver[L12](#link-12), jag citerar:
+Enligt Backer (2024) har Playwright inbyggt stöd för några testrapporterare och har förmågan att konfigurera rapporterarna[[L10]](#link-10) och författaren för Playwright Reporting (2023) skriver[[L12]](#link-12), jag citerar:
 > Playwright reporting gives a built-in option for reporters. You can generate it by passing the reporter in the command line or specifying it in the Playwright configuration file.
 >
 > Before we get into actual test reporters, let's quickly set up the Playwright framework and run the example tests to see tests in action, and further, you will use it to create working example code.
@@ -257,9 +257,9 @@ Enligt Backer (2024) har Playwright inbyggt stöd för några testrapporterare o
 > - JUnit Reporter
 > - GitHub Actions annotations
 
-Enligt Backer (2024 ) har Cypress en standard "spec reporter" som går att konfigurera med andra rapporterare som Cypress stödjer. Backer skriver att Cypress är byggt utifrån Mocha, så alla rapporterare som är gjorda för Mocha kan användas av Cypress[L10](#link-10).  
+Enligt Backer (2024 ) har Cypress en standard "spec reporter" som går att konfigurera med andra rapporterare som Cypress stödjer. Backer skriver att Cypress är byggt utifrån Mocha, så alla rapporterare som är gjorda för Mocha kan användas av Cypress[[L10]](#link-10).  
 
-Bhat och Hegdeg (2022) har gjort en steg för steg guide för installation av `cypress-mochawesome-reporter`[L13](#link-13):
+Bhat och Hegdeg (2022) har gjort en steg för steg guide för installation av `cypress-mochawesome-reporter`[[L13]](#link-13):
 
 >Step 1: Install  Cypress reporter, using Terminal install cypress-mochawesome-reporter, with command
 >
@@ -322,13 +322,13 @@ Bhat och Hegdegs version av installationen av cypress-mochawesome-reporter skilj
 
 ### Webbläsare 2.2.2
 
-Enligt GH (2023) stödjer Playwright Chrome familjens webbläsare (Chrome, Edge), Webkit (Safari), och Firefox[L14](#link-14). Solderea (2023) skriver också att det är dem webbläsarna som Playwright stödjer[L15](#link-15).
+Enligt GH (2023) stödjer Playwright Chrome familjens webbläsare (Chrome, Edge), Webkit (Safari), och Firefox[[L14]](#link-14). Solderea (2023) skriver också att det är dem webbläsarna som Playwright stödjer[[L15]](#link-15).
 
-Enligt Tej (2023) stödjer Cypress Chrome, Firefox, och Edge[L9](#link-9). Solderea (2023) skriver att Google Chrome, FireFox, Edge, Electron och WebKit stödjs (Med hjälp av Playwright)[L15](#link-15). Tej nämner också en av Cypress nackdelar när det gäller exekvering av test: "Inability to instantiate multiple browsers simultaneously."
+Enligt Tej (2023) stödjer Cypress Chrome, Firefox, och Edge[[L9]](#link-9). Solderea (2023) skriver att Google Chrome, FireFox, Edge, Electron och WebKit stödjs (Med hjälp av Playwright)[[L15]](#link-15). Tej nämner också en av Cypress nackdelar när det gäller exekvering av test: "Inability to instantiate multiple browsers simultaneously."
 
 ## Installation 3.3
 
-Enligt Solderea (2023) är det här stegen för installation av Playwright respektive Cypress[L15](#link-15):
+Enligt Solderea (2023) är det här stegen för installation av Playwright respektive Cypress[[L15]](#link-15):
 
 **Playwright**
 
@@ -420,7 +420,7 @@ Under alla figurer måste anges figurnummer och figurtext. Figurer i kapitel X n
 ## Hastighet 3.1
 <a name="back-1"></a>
 <a name="back-2"></a>
-Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur snabbt alla tester genomförs. När testerna genomförs med Cypress exekveras testerna en efter en. I Playwright finns det en tid som går att observeras för varje test.[1](#bilaga-1) I Cypress finns en total tid för alla tester, men inte för varje enskilt test.[2](#bilaga-2)
+Playwrights tester körs parallellt med varandra, vilket kan drastiskt öka hur snabbt alla tester genomförs. När testerna genomförs med Cypress exekveras testerna en efter en. I Playwright finns det en tid som går att observeras för varje test.[[1]](#bilaga-1) I Cypress finns en total tid för alla tester, men inte för varje enskilt test.[[2]](#bilaga-2)
 
 **Analys:**
 
@@ -431,7 +431,7 @@ Playwrights parallellisering av testerna är fördelaktig för större projekt m
 **Playwright**
 
 1. Skriv kommandot/skriptet: npx playwright test --ui i terminalen.
-2. Ett fönster bör dyka upp med det grafiska gränssnittet för testerna.[L6](#link-6)
+2. Ett fönster bör dyka upp med det grafiska gränssnittet för testerna.[[L6]](#link-6)
 
 Testerna kan ses på den vänstra sidan av fönstret, där det finns start, stop, watch all, collapse all knappar. Det går också att filtrera testerna med passed, failed, skipped samt välja om testerna ska köras med en eller flera webbläsare: Chromium, WebKit och Firefox parallellt eller inte. På den högra sidan finns en visuell bild för varje steg av testet, en tidslinje samt verktyg som stödjer användaren att felsöka och/eller skapa testkod (Locator, Source, Log, Errors, Console, Network, Attachments). Playwright-fönstret har även en knapp för nattläge.
 
@@ -442,7 +442,7 @@ Testerna kan ses på den vänstra sidan av fönstret, där det finns start, stop
 3. Tryck på E2E testing.
 4. Tryck på den webbläsare du vill använda för testning.
 5. Tryck på den fil du vill testa.
-6. Det grafiska gränssnittet för testerna bör nu visas[11](#bilaga-11).
+6. Det grafiska gränssnittet för testerna bör nu visas[[11]](#bilaga-11).
 
 Likt Playwright, har Cypress testerna på den vänstra sidan av fönstret. Längst till vänster har Cypress knapparna Specs, Runs, Debug och Settings och Run All Tests, Stop Running för styrning av testerna. Runs och Debug tillhör Cypress Cloud och ger användaren tillgång till tester som spelats in tidigare, repris på de inspelade testen med debug-möjlighet genom användning av Cypress Test replay. Det är dock lite struligt att komma igång med Cypress Cloud och därför kommer det inte analyseras. På högra sidan av Cypress-fönstret finns:
 
@@ -460,7 +460,7 @@ Playwrights kortare process underlättar för utvecklare som vill vara produktiv
 
 <a name="back-7"></a>
 <a name="back-8"></a>
-Både Playwright och Cypress har en "selector" knapp som underlättar för användaren när hen skriver tester.[7](#bilaga-7)[8](#bilaga-8)
+Både Playwright och Cypress har en "selector" knapp som underlättar för användaren när hen skriver tester.[[7]](#bilaga-7)[[8]](#bilaga-8)
 
 ### Testrapporterare (show-report) 3.2.1
 
@@ -468,12 +468,12 @@ Playwright har inbyggt stöd för testrapporter som visas visuellt i en webbläs
 
 Steg för Playwright's "show-report":
 1. Skriv `npx playwright test` i terminalen.
-2. Skriv `npx playwright show-report`i terminalen.[9](#bilaga-9)<a name="back-9"></a>
+2. Skriv `npx playwright show-report`i terminalen.[[9]](#bilaga-9)<a name="back-9"></a>
 3. En webbläsare bör dyka upp med testrapporterna.
 
 Steg för Cypress's "show-report":
 1. Installera cypress-mochawesome-reporter genom att skriva `npm install --save-dev cypress-mochawesome-reporter` i terminalen.
-2. Konfigurera cypress.config.js filen med följande kod[L7](#link-7): 
+2. Konfigurera cypress.config.js filen med följande kod[[L7]](#link-7): 
 ```javascript
 const { defineConfig } = require('cypress');
 const mochawesome = require('cypress-mochawesome-reporter/plugin');
@@ -501,7 +501,7 @@ module.exports = defineConfig({
 });
 
 ```
-3. Skriv `npx cypress run` i terminalen.[10](#bilaga-10)<a name="back-10"></a>
+3. Skriv `npx cypress run` i terminalen.[[10]](#bilaga-10)<a name="back-10"></a>
 4. Den bör skapa en html fil i `cypress/reports` som går att öppna med live server.
 5. En webbläsare öppnas upp med testrapportena, likt Playwrights show-report.
 
@@ -511,30 +511,30 @@ Playwright har inbyggt stöd för "show-report", vilket visar upp en HTML-basera
 
 ### Webbläsare 3.2.2
 
-Playwright stödjer Chromium, Firefox, WebKit, Google Chrome och Microsoft Edge[L1](#link-1), medan Cypress stödjer Chromium, Firefox, Google Chrome, Microsoft Edge och Electron[L2](#link-2), samt en mer experimentell version av WebKit. Det faktum att Playwright har ett mer omfattande stöd för WebKit är en fördel för dem som vill testa webbläsare för mobila enheter.
+Playwright stödjer Chromium, Firefox, WebKit, Google Chrome och Microsoft Edge[[L1]](#link-1), medan Cypress stödjer Chromium, Firefox, Google Chrome, Microsoft Edge och Electron[[L2]](#link-2), samt en mer experimentell version av WebKit. Det faktum att Playwright har ett mer omfattande stöd för WebKit är en fördel för dem som vill testa webbläsare för mobila enheter.
 
-Playwright kan också parallellt köra test för varje webbläsare som de har stöd för.[6](#bilaga-6) <a name="back-6"></a>
+Playwright kan också parallellt köra test för varje webbläsare som de har stöd för.[[6]](#bilaga-6) <a name="back-6"></a>
 
 **Analys**
 
 Playwright har en fördel när det gäller WebKit och parallell exekvering av testerna i olika webbläsare.
 
 ## Installation 3.3
-Notera att installationen av Playwright och Cypress kräver att du har installerat ®Node.js: `Node.js® is a free, open-source, cross-platform JavaScript runtime environment`.[L5](#link-5)
+Notera att installationen av Playwright och Cypress kräver att du har installerat ®Node.js: `Node.js® is a free, open-source, cross-platform JavaScript runtime environment`.[[L5]](#link-5)
 
 Playwright och Cypress har tydlig information om hur installationen av testverktyget går till:
 
-**Playwright**[L3](#link-3)
+**Playwright**[[L3]](#link-3)
 <a name="back-3"></a>
 <a name="back-4"></a>
 <a name="back-5"></a>
-1. Skriv `npm init playwright@latest` i terminalen.[3](#bilaga-3)
+1. Skriv `npm init playwright@latest` i terminalen.[[3]](#bilaga-3)
 2. Gå igenom alla steg som dyker upp i terminalen.
 
-**Cypress**[L4](#link-4)
-1. Skriv `npm init` i terminalen.[4](#bilaga-4)
+**Cypress**[[L4]](#link-4)
+1. Skriv `npm init` i terminalen.[[4]](#bilaga-4)
 2. Gå igenom alla steg som dyker upp i terminalen.
-3. skriv `npm install cypress --save-dev` i terminalen.[5](#bilaga-5)
+3. skriv `npm install cypress --save-dev` i terminalen.[[5]](#bilaga-5)
 
 **Analys**
 
@@ -675,7 +675,7 @@ Rhodin, M. (2018). Projekt Islandshäst. Rörelseforskning på häst och ryttare
 
 <a name="bilaga-1"></a>
 
-`Observera att varje test har en tid.` [Tillbaka [1](#back-1)
+`Observera att varje test har en tid.` [Tillbaka [1]](#back-1)
 
  ![HastighetPlaywright](images/playwrighthastighet.png)
 
@@ -683,7 +683,7 @@ Rhodin, M. (2018). Projekt Islandshäst. Rörelseforskning på häst och ryttare
 
 <a name="bilaga-2"></a>
 
-`Observera att det bara finns en total tid för alla test.` [Tillbaka [2](#back-2)
+`Observera att det bara finns en total tid för alla test.` [Tillbaka [2]](#back-2)
 
 ![HastighetCypress](images/cypresshastighet.png)
 
@@ -691,7 +691,7 @@ Rhodin, M. (2018). Projekt Islandshäst. Rörelseforskning på häst och ryttare
 
 <a name="bilaga-3"></a>
 
-`npm init playwright@latest` [Tillbaka [3](#back-3)
+`npm init playwright@latest` [Tillbaka [3]](#back-3)
 
 ![PlaywrightInstall](images/playwrightInstallation.png)
 
@@ -699,19 +699,19 @@ Rhodin, M. (2018). Projekt Islandshäst. Rörelseforskning på häst och ryttare
 
 <a name="bilaga-4"></a>
 
-`npm init` [Tillbaka [4](#back-4)
+`npm init` [Tillbaka [4]](#back-4)
 
 ![NpmInit](images/npminit.png)
 
 <a name="bilaga-5"></a>
 
-`npm install cypress --save-dev` [Tillbaka [5](#back-5)
+`npm install cypress --save-dev` [Tillbaka [5]](#back-5)
 
 ![CypressInstall](images/CypressInstallation.png)
 
 <a name="bilaga-6"></a>
 
-`Parallell körning av de webbläsare som Playwright stödjer.` [Tillbaka [6](#back-6)
+`Parallell körning av de webbläsare som Playwright stödjer.` [Tillbaka [6]](#back-6)
 
 ![PlaywrightParallell](images/webbrowserparalell.png)
 
@@ -719,7 +719,7 @@ Rhodin, M. (2018). Projekt Islandshäst. Rörelseforskning på häst och ryttare
 
 <a name="bilaga-7"></a>
 
-`Playwrights symbol för selektorn är tre cirklar/måltavla` [Tillbaka [7](#back-7)
+`Playwrights symbol för selektorn är tre cirklar/måltavla` [Tillbaka [7]](#back-7)
 
 ![Playwrightlocator](images/playwrightlocator.png)
 
@@ -727,30 +727,30 @@ Rhodin, M. (2018). Projekt Islandshäst. Rörelseforskning på häst och ryttare
 
 <a name="bilaga-8"></a>
 
-`Cypress symbol för selektorn är ett sikte` [Tillbaka [8](#back-8)
+`Cypress symbol för selektorn är ett sikte` [Tillbaka [8]](#back-8)
 
 ![Cypresslocator](images/cypresslocator.png)
 
 <a name="bilaga-9"></a>
 
-`Playwrights show-report UI` [Tillbaka [9](#back-9)
+`Playwrights show-report UI` [Tillbaka [9]](#back-9)
 
 ![PlaywrightShowReport](images/PlaywrightShowReport.png)
 
 <a name="bilaga-10"></a>
 
-`Cypress show-report UI` [Tillbaka [10](#back-10)
+`Cypress show-report UI` [Tillbaka [10]](#back-10)
 
 ![CypressShowReport](images/mochawesomereport.png)
 
 <a name="bilaga-11"></a>
 
-`Cypress test UI` [Tillbaka [11](#back-11)
+`Cypress test UI` [Tillbaka [11]](#back-11)
 
 ![CypressTestUi](images/cypresstestpage.png)
 
 <a name="bilaga-12"></a>
 
-`Playwright test UI` [Tillbaka [12](#back-12)
+`Playwright test UI` [Tillbaka [12]]](#back-12)
 
 ![PlaywrightTestUi](images/playwrighttestui.png)
