@@ -353,34 +353,34 @@ Installationen av Cypress och Playwright stämmer överens med mina observatione
 ## Internet referenslista 3.4
 
 <a name="link-8"></a>
-<font color="blue">L8</font>Pathak, K. (2024) Cypress vs Playwright: A Comparative Analysis, hämtad från https://testgrid.io/blog/cypress-vs-playwright/
+<font color="blue">L8</font>, Pathak, K. (2024) Cypress vs Playwright: A Comparative Analysis, hämtad från https://testgrid.io/blog/cypress-vs-playwright/
 
 <a name="link-15"></a>
-<font color="blue">L15</font>Solderea, I (2023) Cypress vs Playwright: A Detailed Comparison, hämtad från https://www.lambdatest.com/blog/cypress-vs-playwright/
+<font color="blue">L15</font>, Solderea, I (2023) Cypress vs Playwright: A Detailed Comparison, hämtad från https://www.lambdatest.com/blog/cypress-vs-playwright/
 
 <a name="link-9"></a>
-<font color="blue">L9</font>Tej, K (2023) Playwright vs Cypress: A Comparison, hämtad från https://www.browserstack.com/guide/playwright-vs-cypress
+<font color="blue">L9</font>, Tej, K (2023) Playwright vs Cypress: A Comparison, hämtad från https://www.browserstack.com/guide/playwright-vs-cypress
 
 <a name="link-14"></a>
-<font color="blue">L14</font>GH (okänt namn), (2023) Playwright Automation Framework: Tutorial, hämtad från https://www.browserstack.com/guide/playwright-tutorial
+<font color="blue">L14</font>, GH (okänt namn), (2023) Playwright Automation Framework: Tutorial, hämtad från https://www.browserstack.com/guide/playwright-tutorial
 
 <a name="link-10"></a>
-<font color="blue">L10</font>Backer, A (2024) Playwright vs. Cypress: Key Differences, hämtad från https://muuktest.com/blog/playwright-vs-cypress#playwright_vs._cypress:_a_comparison
+<font color="blue">L10</font>, Backer, A (2024) Playwright vs. Cypress: Key Differences, hämtad från https://muuktest.com/blog/playwright-vs-cypress#playwright_vs._cypress:_a_comparison
 
 <a name="link-13"></a>
-<font color="blue">L13</font>Bhat, P & Hegdeg, G (2022) Understanding Cypress HTML Reporter, hämtad från https://www.browserstack.com/guide/cypress-html-reporter
+<font color="blue">L13</font>, Bhat, P & Hegdeg, G (2022) Understanding Cypress HTML Reporter, hämtad från https://www.browserstack.com/guide/cypress-html-reporter
 
 <a name="link-12"></a>
-<font color="blue">L12</font>Playwright Reporting, (2023) Playwright Reporting: A Complete Tutorial, hämtad från https://www.lambdatest.com/learning-hub/playwright-reporting
+<font color="blue">L12</font>, Playwright Reporting, (2023) Playwright Reporting: A Complete Tutorial, hämtad från https://www.lambdatest.com/learning-hub/playwright-reporting
 
 <a name="link-11"></a>
-<font color="blue">L11</font>Del Puppo, L (2023) Playwright - UI Mode, hämtad från https://blog.delpuppo.net/playwright-ui-mode
+<font color="blue">L11</font>, Del Puppo, L (2023) Playwright - UI Mode, hämtad från https://blog.delpuppo.net/playwright-ui-mode
 
 <a name="link-16"></a>
-<font color="blue">L16</font>Unknown, (2024) Opening the App, hämtad från https://docs.cypress.io/guides/getting-started/opening-the-app
+<font color="blue">L16</font>, Unknown, (2024) Opening the App, hämtad från https://docs.cypress.io/guides/getting-started/opening-the-app
 
 <a name="link-17"></a>
-<font color="blue">L17</font>Unknown, (2024) Your First Test with Cypress, hämtad från https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test
+<font color="blue">L17</font>, Unknown, (2024) Your First Test with Cypress, hämtad från https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test
 
 <!-- Uppsatsen teori handlar om att ”beskriva det som redan är skrivet”. Utifrån syfte och problemformulering letar ni upp lämplig teori där ni kan fördjupa er i frågeställningarna. Teorin ska knytas till det undersökningsresultat du/ni kommit fram till. Detta ska bekräftas eller dementeras.
 
