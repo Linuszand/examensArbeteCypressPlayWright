@@ -477,7 +477,7 @@ Testerna kan ses på den vänstra sidan av fönstret, där det finns start, stop
 - En knapp som gör det möjligt att generera och kopiera selektorer
 - Knapp för nattläge
 
-Eftersom Playwright är ganska nytt har inte den är lika stor gemenskap som Cypress.
+Eftersom Playwright är ganska nytt har inte den en lika stor gemenskap som Cypress.
 
 **Cypress**
 
